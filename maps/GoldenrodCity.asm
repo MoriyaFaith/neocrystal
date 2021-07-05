@@ -1,4 +1,4 @@
-GOLDENRODCITY_MOVETUTOR_PRICE EQU 4000
+GOLDENRODCITY_MOVETUTOR_PRICE EQU 5000
 
 	object_const_def
 	const GOLDENRODCITY_POKEFAN_M1
@@ -479,7 +479,7 @@ GoldenrodCityMoveTutorAskTeachAMoveText:
 
 GoldenrodCityMoveTutorAsk4000CoinsOkayText:
 	text "It will cost you"
-	line "¥4000. Okay?"
+	line "¥5000. Okay?"
 	done
 
 GoldenrodCityMoveTutorAwwButTheyreAmazingText:

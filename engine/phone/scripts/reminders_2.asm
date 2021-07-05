@@ -2,6 +2,10 @@ RalphHurryScript:
 	farwritetext RalphHurryText
 	end
 
+WiltonHurryScript:
+	farwritetext WiltonHurryText
+	end
+
 AnthonyHurryScript:
 	farwritetext AnthonyHurryText
 	end

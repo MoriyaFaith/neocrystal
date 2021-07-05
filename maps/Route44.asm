@@ -10,6 +10,7 @@
 	const ROUTE44_POKE_BALL1
 	const ROUTE44_POKE_BALL2
 	const ROUTE44_POKE_BALL3
+	const ROUTE44_FISHER3
 
 Route44_MapScripts:
 	def_scene_scripts
@@ -504,6 +505,73 @@ Route44Sign2Text:
 	line "BLACKTHORN CITY"
 	done
 
+Route44SuperRodHouseFishingGuruScript:
+	faceplayer
+	opentext
+	checkevent EVENT_GOT_SUPER_ROD
+	iftrue .GotSuperRod
+	writetext Route44OfferSuperRodText
+	yesorno
+	iffalse .Refused
+	writetext Route44GiveSuperRodText
+	promptbutton
+	verbosegiveitem SUPER_ROD
+	iffalse .NoRoom
+	setevent EVENT_GOT_SUPER_ROD
+.GotSuperRod:
+	writetext Route44GaveSuperRodText
+	waitbutton
+	closetext
+	end
+
+.Refused:
+	writetext Route44DontWantSuperRodText
+	waitbutton
+.NoRoom:
+	closetext
+	end
+
+Route44OfferSuperRodText:
+	text "I'm the FISHING"
+	line "GURU's younger"
+	cont "brother."
+
+	para "I can see that you"
+	line "like fishing."
+
+	para "There's no doubt"
+	line "in my mind at all!"
+
+	para "So? I know I'm"
+	line "right."
+	done
+
+Route44GiveSuperRodText:
+	text "Yes, yes. Just as"
+	line "I thought!"
+
+	para "Here, fishing fan!"
+	line "Take this--it's a"
+	cont "SUPER ROD."
+	done
+
+Route44GaveSuperRodText:
+	text "Try your hand at"
+	line "fishing wherever"
+	cont "there is water."
+
+	para "Remember--you can"
+	line "catch different"
+
+	para "#MON using"
+	line "different RODS."
+	done
+
+Route44DontWantSuperRodText:
+	text "Huh? My own eyes"
+	line "deceived me?"
+	done
+
 Route44_MapEvents:
 	db 0, 0 ; filler
 
@@ -529,3 +597,4 @@ Route44_MapEvents:
 	object_event 30,  8, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route44MaxRevive, EVENT_ROUTE_44_MAX_REVIVE
 	object_event 45,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route44UltraBall, EVENT_ROUTE_44_ULTRA_BALL
 	object_event 14,  9, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route44MaxRepel, EVENT_ROUTE_44_MAX_REPEL
+	object_event 35,  8, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route44SuperRodHouseFishingGuruScript, -1

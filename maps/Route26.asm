@@ -337,12 +337,17 @@ CooltrainerfBeth1SeenText:
 	para "He was really"
 	line "strong, but…"
 
-	para "It was as if he"
-	line "absolutely had to"
-	cont "win at any cost."
+	para "He kept talking"
+	line "about someone…"
 
-	para "I felt sorry for"
-	line "his #MON."
+	para "I think their name"
+	line "was <PLAY_G>?"
+
+	para "Oh, that's you?"
+
+	para "I feel bad that"
+	line "you have to deal"
+	cont "with him."
 	done
 
 CooltrainerfBeth1BeatenText:

@@ -24,6 +24,9 @@ ManiaScript:
 	writetext ManiaText_GotShuckle
 	playsound SFX_KEY_ITEM
 	waitsfx
+	promptbutton
+	writetext ManiaText_TeamRocket
+	promptbutton
 	closetext
 	setevent EVENT_GOT_SHUCKIE
 	end
@@ -101,15 +104,15 @@ ManiasHouseUnusedBookshelf: ; unreferenced
 ManiaText_AskLookAfterShuckle:
 	text "I, I'm in shock!"
 
-	para "A guy about your"
-	line "age with piercing"
+	para "Some thug in dark"
+	line "clothes wearing"
 
-	para "eyes and long hair"
+	para "white gloves just"
 	line "came in."
 
 	para "He scared me into"
 	line "giving him my"
-	cont "prized #MON!"
+	cont "rare #MON!"
 
 	para "I still have one"
 	line "left, but what if"
@@ -138,6 +141,22 @@ ManiaText_PartyFull:
 	text "Your #MON party"
 	line "is full."
 	done
+
+ManiaText_TeamRocket:
+	text "Huh? You know who"
+	line "that was?"
+
+	para "TEAM ROCKET!? Oh"
+	line "no… They'll sell"
+	cont "my baby away!"
+
+	para "Can you try to"
+	line "find her for me?"
+	
+	para "It's a SNEASEL."
+	line "It's rare here in"
+	cont "JOHTO."
+	done 
 
 ManiaText_IfHeComesBack:
 	text "Oh, no… What'll"

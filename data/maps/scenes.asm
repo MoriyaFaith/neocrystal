@@ -48,6 +48,7 @@ MapScenes::
 	scene_var ECRUTEAK_GYM,                                wEcruteakGymSceneID
 	scene_var MAHOGANY_TOWN,                               wMahoganyTownSceneID
 	scene_var ROUTE_42,                                    wRoute42SceneID
+	scene_var ROUTE_42_ECRUTEAK_GATE,                      wRoute42EcruteakGateSceneID
 	scene_var CIANWOOD_CITY,                               wCianwoodCitySceneID
 	scene_var BATTLE_TOWER_1F,                             wBattleTower1FSceneID
 	scene_var BATTLE_TOWER_BATTLE_ROOM,                    wBattleTowerBattleRoomSceneID
@@ -84,4 +85,6 @@ MapScenes::
 	scene_var MOUNT_MOON_SQUARE,                           wMountMoonSquareSceneID
 	scene_var MOBILE_TRADE_ROOM,                           wMobileTradeRoomSceneID
 	scene_var MOBILE_BATTLE_ROOM,                          wMobileBattleRoomSceneID
+	scene_var LAKE_OF_RAGE,                          	   wLakeofRageSceneID
+	scene_var ROUTE_47,                                    wRoute47SceneID 
 	db -1 ; end

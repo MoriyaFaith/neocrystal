@@ -354,14 +354,14 @@ CianwoodGymSignText:
 	done
 
 CianwoodPharmacySignText:
-	text "500 Years of"
-	line "Tradition"
+	text "There's a notice"
+	line "here…"
 
-	para "CIANWOOD CITY"
+	para "The CIANWOOD"
 	line "PHARMACY"
 
-	para "We Await Your"
-	line "Medicinal Queries"
+	para "We've moved to"
+	line "ROUTE 48."
 	done
 
 CianwoodPhotoStudioSignText:
@@ -388,6 +388,8 @@ CianwoodCity_MapEvents:
 	warp_event  9, 31, CIANWOOD_PHOTO_STUDIO, 1
 	warp_event 15, 37, CIANWOOD_LUGIA_SPEECH_HOUSE, 1
 	warp_event  5, 17, POKE_SEERS_HOUSE, 1
+	warp_event 10, 13, ROUTE_47, 1
+	warp_event  9, 43, CIANWOOD_GYM, 1
 
 	def_coord_events
 	coord_event 11, 16, SCENE_CIANWOODCITY_SUICUNE_AND_EUSINE, CianwoodCitySuicuneAndEusine

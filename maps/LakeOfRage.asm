@@ -7,15 +7,15 @@
 	const LAKEOFRAGE_FISHER2
 	const LAKEOFRAGE_COOLTRAINER_M
 	const LAKEOFRAGE_COOLTRAINER_F2
-	const LAKEOFRAGE_GYARADOS
+	const LAKEOFRAGE_SILVER
 	const LAKEOFRAGE_WESLEY
 	const LAKEOFRAGE_POKE_BALL1
 	const LAKEOFRAGE_POKE_BALL2
 
 LakeOfRage_MapScripts:
 	def_scene_scripts
-	scene_script .DummyScene0 ; unusable
-	scene_script .DummyScene1 ; unusable
+	scene_script .DummyScene0 ;
+	scene_script .DummyScene1 ;
 
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, .FlyPoint
@@ -78,30 +78,151 @@ LakeOfRageLanceScript:
 	iffalse .RefusedToHelp
 	sjump .AgreedToHelp
 
-RedGyarados:
-	opentext
-	writetext LakeOfRageGyaradosCryText
-	pause 15
-	cry GYARADOS
-	closetext
-	loadwildmon GYARADOS, 30
-	loadvar VAR_BATTLETYPE, BATTLETYPE_SHINY
-	startbattle
-	ifequal LOSE, .NotBeaten
-	disappear LAKEOFRAGE_GYARADOS
-.NotBeaten:
-	reloadmapafterbattle
-	opentext
-	giveitem RED_SCALE
-	waitsfx
-	writetext LakeOfRageGotRedScaleText
-	playsound SFX_ITEM
-	waitsfx
-	itemnotify
-	closetext
-	setscene 0 ; Lake of Rage does not have a scene variable
-	appear LAKEOFRAGE_LANCE
+oops: ;sets Rival Battle because I did an oopsie
+	setscene SCENE_LAKEOFRAGE_RIVAL_BATTLE
 	end
+LakeofRageRivalBattleScene1:
+	moveobject LAKEOFRAGE_SILVER, 18, 29
+	showemote EMOTE_SHOCK, PLAYER, 15
+	special FadeOutMusic
+	pause 30
+	playsound SFX_THROW_BALL
+	pause 30
+	playsound SFX_BALL_POOF
+	pause 45
+	playsound SFX_BALL_WOBBLE
+	pause 30
+	playsound SFX_BALL_WOBBLE
+	pause 30
+	playsound SFX_BALL_WOBBLE
+	pause 30
+	playsound SFX_CAUGHT_MON 
+	pause 60
+	appear LAKEOFRAGE_SILVER
+	applymovement LAKEOFRAGE_SILVER, LakeofRageRivalBattleApproachMovement1
+	sjump LakeofRageRivalBattleScript
+LakeofRageRivalBattleScene2:
+	moveobject LAKEOFRAGE_SILVER, 19, 29
+	showemote EMOTE_SHOCK, PLAYER, 15
+	special FadeOutMusic
+	pause 30
+	playsound SFX_THROW_BALL
+	pause 30
+	playsound SFX_BALL_POOF
+	pause 45
+	playsound SFX_BALL_WOBBLE
+	pause 30
+	playsound SFX_BALL_WOBBLE
+	pause 30
+	playsound SFX_BALL_WOBBLE
+	pause 30
+	playsound SFX_CAUGHT_MON 
+	pause 60
+	appear LAKEOFRAGE_SILVER
+	applymovement LAKEOFRAGE_SILVER, LakeofRageRivalBattleApproachMovement1
+	sjump LakeofRageRivalBattleScript
+LakeofRageRivalBattleScene3:
+	moveobject LAKEOFRAGE_SILVER, 20, 29
+	showemote EMOTE_SHOCK, PLAYER, 15
+	special FadeOutMusic
+	pause 30
+	playsound SFX_THROW_BALL
+	pause 30
+	playsound SFX_BALL_POOF
+	pause 45
+	playsound SFX_BALL_WOBBLE
+	pause 30
+	playsound SFX_BALL_WOBBLE
+	pause 30
+	playsound SFX_BALL_WOBBLE
+	pause 30
+	playsound SFX_CAUGHT_MON 
+	pause 60
+	appear LAKEOFRAGE_SILVER
+	applymovement LAKEOFRAGE_SILVER, LakeofRageRivalBattleApproachMovement1
+	sjump LakeofRageRivalBattleScript
+LakeofRageRivalBattleScene4:
+	moveobject LAKEOFRAGE_SILVER, 21, 29
+	showemote EMOTE_SHOCK, PLAYER, 15
+	special FadeOutMusic
+	pause 30
+	playsound SFX_THROW_BALL
+	pause 30
+	playsound SFX_BALL_POOF
+	pause 45
+	playsound SFX_BALL_WOBBLE
+	pause 30
+	playsound SFX_BALL_WOBBLE
+	pause 30
+	playsound SFX_BALL_WOBBLE
+	pause 30
+	playsound SFX_CAUGHT_MON 
+	pause 60
+	appear LAKEOFRAGE_SILVER
+	applymovement LAKEOFRAGE_SILVER, LakeofRageRivalBattleApproachMovement1
+
+LakeofRageRivalBattleScript:
+	playmusic MUSIC_RIVAL_ENCOUNTER
+	opentext
+	writetext LakeofRageRivalBeforeText
+	waitbutton
+	closetext
+	setevent EVENT_RIVAL_AZALEA_TOWN
+	checkevent EVENT_GOT_TOTODILE_FROM_ELM
+	iftrue .Totodile
+	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
+	iftrue .Chikorita
+	winlosstext LakeofRageRivalWinText, LakeofRageRivalLossText
+	setlasttalked LAKEOFRAGE_SILVER
+	loadtrainer RIVAL1, RIVAL1_NEW_TOTODILE
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	sjump .AfterBattle
+
+.Totodile:
+	winlosstext LakeofRageRivalWinText, LakeofRageRivalLossText
+	setlasttalked LAKEOFRAGE_SILVER
+	loadtrainer RIVAL1, RIVAL1_NEW_CHIKORITA
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	sjump .AfterBattle
+
+.Chikorita:
+	winlosstext LakeofRageRivalWinText, LakeofRageRivalLossText
+	setlasttalked LAKEOFRAGE_SILVER
+	loadtrainer RIVAL1, RIVAL1_NEW_CYNDAQUIL
+	startbattle
+	dontrestartmapmusic
+	reloadmapafterbattle
+	sjump .AfterBattle
+
+.AfterBattle:
+	playmusic MUSIC_RIVAL_AFTER
+	opentext
+	writetext LakeofRageRivalAfterText
+	waitbutton
+	closetext
+	playsound SFX_WARP_TO
+	applymovement LAKEOFRAGE_SILVER, LakeofRageRivalBattleExitMovement
+	disappear LAKEOFRAGE_SILVER
+	setscene SCENE_LAKEOFRAGE_NOTHING
+	waitsfx
+	appear LAKEOFRAGE_LANCE
+	playmapmusic
+	end
+
+LakeofRageRivalBattleApproachMovement1:
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
+	step_end
+
+LakeofRageRivalBattleExitMovement:
+	teleport_from
+	step_end
 
 LakeOfRageGrampsScript:
 	faceplayer
@@ -310,8 +431,66 @@ LakeOfRageLanceAskHelpText:
 	line "going to help me?"
 	done
 
-LakeOfRageGyaradosCryText:
-	text "GYARADOS: Gyashaa!"
+LakeofRageRivalBeforeText:
+	text "... ... ... ..."
+	line "<PLAYER>."
+
+	para "You came here"
+	line "because of that"
+
+	para "rumor about the"
+	line "red GYARADOS,"
+	cont "didn't you?"
+	
+	para "Well, tough luck," 
+	line "pal. I already"
+	cont "caught it. A"
+
+	para "slacker like you"
+	line "doesn't deserve"
+	cont "it, anyway."
+	
+	para "Let me show you"
+	line "what a great"
+	cont "#MON trainer"
+	cont "looks like!"
+	done
+
+LakeofRageRivalWinText:
+	text "Tch! Of course"
+	line "you win."
+
+	para "Why are you"
+	line "always the one"
+
+	para "to win against"
+	line "me?"
+	done
+
+LakeofRageRivalAfterText:
+	text "Every time I lose"
+	line "to you, it makes"
+	cont "my blood boil."
+
+	para "This means"
+	line "nothing."
+
+	para "I promise you,"
+	line "Next time we"
+	cont "meet, <PLAYER>,"
+
+	para "I will crush you."
+
+	para "<RIVAL> used"
+	line "FLY!"
+	done
+
+LakeofRageRivalLossText:
+	text "With the power I"
+	line "now have, the"
+
+	para "likes of you don't"
+	line "stand a chance."
 	done
 
 LakeOfRageGotRedScaleText:
@@ -499,6 +678,10 @@ LakeOfRage_MapEvents:
 	warp_event 27, 31, LAKE_OF_RAGE_MAGIKARP_HOUSE, 1
 
 	def_coord_events
+	coord_event 18, 34, SCENE_LAKEOFRAGE_RIVAL_BATTLE, LakeofRageRivalBattleScene1
+	coord_event 19, 34, SCENE_LAKEOFRAGE_RIVAL_BATTLE, LakeofRageRivalBattleScene2
+	coord_event 20, 34, SCENE_LAKEOFRAGE_RIVAL_BATTLE, LakeofRageRivalBattleScene3
+	coord_event 21, 34, SCENE_LAKEOFRAGE_RIVAL_BATTLE, LakeofRageRivalBattleScene4
 
 	def_bg_events
 	bg_event 21, 27, BGEVENT_READ, LakeOfRageSign
@@ -516,7 +699,7 @@ LakeOfRage_MapEvents:
 	object_event 24, 26, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerFisherRaymond, EVENT_LAKE_OF_RAGE_CIVILIANS
 	object_event  4, 15, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 1, TrainerCooltrainermAaron, EVENT_LAKE_OF_RAGE_CIVILIANS
 	object_event 36,  7, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 0, TrainerCooltrainerfLois, EVENT_LAKE_OF_RAGE_CIVILIANS
-	object_event 18, 22, SPRITE_GYARADOS, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, RedGyarados, EVENT_LAKE_OF_RAGE_RED_GYARADOS
+	object_event 17, 28, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, oops, EVENT_LAKE_OF_RAGE_RED_GYARADOS
 	object_event  4,  4, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, WesleyScript, EVENT_LAKE_OF_RAGE_WESLEY_OF_WEDNESDAY
 	object_event  7, 10, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LakeOfRageElixer, EVENT_LAKE_OF_RAGE_ELIXER
 	object_event 35,  2, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, LakeOfRageTMDetect, EVENT_LAKE_OF_RAGE_TM_DETECT

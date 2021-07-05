@@ -65,10 +65,9 @@ BattleCommand_Teleport:
 	jr nc, .loop_enemy
 	srl b
 	srl b
+	; If the random number >= player level / 4, Teleport will succeed
 	cp b
-	; This should be jr c, .failed
-	; As written, it makes enemy use of Teleport always succeed if able
-	jr nc, .run_away
+	jr c, .failed
 .run_away
 	call UpdateBattleMonInParty
 	xor a

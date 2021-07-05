@@ -677,15 +677,14 @@ UndergroundSilverBeforeText:
 	para "take care of TEAM"
 	line "ROCKET."
 
-	para "…Wait a second."
-	line "You beat me be-"
-	cont "fore, didn't you?"
+	para "Like I said, this"
+	line "is MY battle."
 
-	para "That was just a"
-	line "fluke."
+	para "It's personal."
 
-	para "But I repay my"
-	line "debts!"
+	para "So I don't need"
+	line "you getting in the"
+	cont "way."
 	done
 
 UndergroundSilverWinText:
@@ -705,41 +704,44 @@ UndergroundSilverAfterText:
 	text "…I don't under-"
 	line "stand…"
 
-	para "Is what that LANCE"
-	line "guy said true?"
+	para "I've done every-"
+	line "thing right…"
 
-	para "That I don't treat"
-	line "#MON properly?"
+	para "I care for my"
+	line "#MON… And I"
+	cont "train hard…"
 
-	para "Love…"
+	para "Why can't I have my"
+	line "revenge?"
 
-	para "Trust…"
+	para "TEAM ROCKET took"
+	line "everything from"
+	cont "me."
 
-	para "Are they really"
-	line "what I lack?"
+	para "My own father left"
+	line "me for them."
 
-	para "Are they keeping"
-	line "me from winning?"
+	para "And now they call"
+	line "HIS name, wanting"
+	cont "him to return."
 
-	para "I… I just don't"
-	line "understand."
+	para "…… ……"
 
-	para "But it's not going"
-	line "to end here."
+	para "So it's personal"
+	line "for you, too,"
+	cont "then."
 
-	para "Not now. Not"
-	line "because of this."
+	para "Fine. I'll leave"
+	line "you to rescue the"
+	cont "DIRECTOR."
 
-	para "I won't give up my"
-	line "dream of becoming"
-
-	para "the world's best"
-	line "#MON trainer!"
+	para "But my father,"
+	line "GIOVANNI, is mine."
 	done
 
 UndergroundSilverLossText:
 	text "Humph. This is my"
-	line "real power, wimp."
+	line "real power."
 
 	para "I'll make TEAM"
 	line "ROCKET history."

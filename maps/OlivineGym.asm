@@ -34,6 +34,7 @@ OlivineGymJasmineScript:
 	promptbutton
 	verbosegiveitem TM_IRON_TAIL
 	iffalse .NoRoomForIronTail
+	setmapscene LAKE_OF_RAGE, SCENE_LAKEOFRAGE_RIVAL_BATTLE
 	setevent EVENT_GOT_TM23_IRON_TAIL
 	writetext Jasmine_IronTailSpeech
 	waitbutton

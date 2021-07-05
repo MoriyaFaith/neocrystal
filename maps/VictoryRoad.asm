@@ -171,9 +171,6 @@ VictoryRoadRivalBeforeText:
 	para "…Don't make me"
 	line "laugh."
 
-	para "You're so much"
-	line "weaker than I am."
-
 	para "I'm not like I was"
 	line "before."
 
@@ -196,33 +193,38 @@ VictoryRoadRivalDefeatText:
 	para "What you possess,"
 	line "and what I lack…"
 
-	para "I'm beginning to"
-	line "understand what"
-
-	para "that dragon master"
-	line "said to me…"
+	para "I don't think I'll"
+	line "ever understand…"
 	done
 
 VictoryRoadRivalAfterText:
-	text "…I haven't given up"
+	text "Tell me something."
+
+	para "Did you ever my"
+	line "father?"
+
+	para "You fought him?"
+	line "I see…"
+
+	para "…I haven't given up"
 	line "on becoming the"
 	cont "greatest trainer…"
 
-	para "I'm going to find"
-	line "out why I can't"
+	para "I'm going to train"
+	line "and become even"
+	cont "stronger."
 
-	para "win and become"
-	line "stronger…"
+	para "And when I do, I'll"
+	line "challenge you,"
 
-	para "When I do, I will"
-	line "challenge you."
-
-	para "And I'll beat you"
+	para "and beat you"
 	line "down with all my"
 	cont "power."
 
-	para "…Humph! You keep"
-	line "at it until then."
+	para "You keep at it"
+	line "until then…"
+
+	para "<PLAYER>."
 	done
 
 VictoryRoadRivalVictoryText:

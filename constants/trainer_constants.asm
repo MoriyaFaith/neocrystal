@@ -27,7 +27,6 @@ CHRIS EQU __trainer_class__
 	const PHONECONTACT_BUENA
 NUM_NONTRAINER_PHONECONTACTS EQU const_value - 1
 
-KRIS EQU __trainer_class__
 	trainerclass FALKNER ; 1
 	const FALKNER1
 
@@ -68,6 +67,9 @@ KRIS EQU __trainer_class__
 	const RIVAL1_5_CHIKORITA
 	const RIVAL1_5_CYNDAQUIL
 	const RIVAL1_5_TOTODILE
+	const RIVAL1_NEW_CHIKORITA
+	const RIVAL1_NEW_CYNDAQUIL
+	const RIVAL1_NEW_TOTODILE
 
 	trainerclass POKEMON_PROF ; a
 
@@ -216,6 +218,7 @@ KRIS EQU __trainer_class__
 	const STEVE
 	const ALLEN
 	const DARIN
+	const THOM
 
 	trainerclass COOLTRAINERF ; 1c
 	const GWEN
@@ -486,6 +489,7 @@ KRIS EQU __trainer_class__
 	const PARRY3
 	const ANTHONY4
 	const ANTHONY5
+	const DEVIN
 
 	trainerclass BIKER ; 2d
 	const BIKER_BENNY
@@ -606,6 +610,7 @@ KRIS EQU __trainer_class__
 	const TODD4
 	const TODD5
 	const QUENTIN
+	const GRANT
 
 	trainerclass EXECUTIVEF ; 37
 	const EXECUTIVEF_1
@@ -682,6 +687,7 @@ KRIS EQU __trainer_class__
 	const BEVERLY3
 	const GEORGIA
 	const JAIME
+	const EDA
 
 	trainerclass RED ; 3f
 	const RED1
@@ -703,4 +709,5 @@ KRIS EQU __trainer_class__
 	trainerclass MYSTICALMAN ; 43
 	const EUSINE
 
+KRIS EQU __trainer_class__
 NUM_TRAINER_CLASSES EQU __trainer_class__ - 1

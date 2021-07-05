@@ -554,7 +554,6 @@ CopScript:
 	opentext
 	writetext ElmsLabOfficerText1
 	promptbutton
-	special NameRival
 	writetext ElmsLabOfficerText2
 	waitbutton
 	closetext
@@ -1285,13 +1284,18 @@ ElmsLabOfficerText1:
 	para "You battled a"
 	line "trainer like that?"
 
-	para "Did you happen to"
-	line "get his name?"
+	para "Do you have any"
+	line "information about"
+	cont "him?"
 	done
 
 ElmsLabOfficerText2:
 	text "OK! So <RIVAL>"
-	line "was his name."
+	line "was his name,"
+
+	para "and he's heading"
+	line "NORTH, to VIOLET"
+	cont "CITY."
 
 	para "Thanks for helping"
 	line "my investigation!"

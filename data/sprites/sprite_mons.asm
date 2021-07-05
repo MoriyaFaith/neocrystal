@@ -36,4 +36,10 @@ SpriteMons:
 	db GYARADOS
 	db LUGIA
 	db HO_OH
+	db MURKROW
+	db ELECTRODE
+	db MACHOKE
+	db MEOWTH
+	db DRATINI
+	db ABRA
 	assert_table_length NUM_POKEMON_SPRITES

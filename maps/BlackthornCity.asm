@@ -322,6 +322,7 @@ BlackthornCity_MapEvents:
 	warp_event  9, 31, MOVE_DELETERS_HOUSE, 1
 	warp_event 36,  9, ICE_PATH_1F, 2
 	warp_event 20,  1, DRAGONS_DEN_1F, 1
+	warp_event 19, 11, BLACKTHORN_GYM_1F, 1
 
 	def_coord_events
 

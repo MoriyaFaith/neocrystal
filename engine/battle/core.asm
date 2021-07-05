@@ -6045,15 +6045,20 @@ LoadEnemyMon:
 	jp .Happiness
 
 .InitDVs:
-; Trainer DVs
+ 	ld a, [wBattleMode]
+ 	dec a
+	jr z, .WildDVs
 
-; All trainers have preset DVs, determined by class
-; See GetTrainerDVs for more on that
-	farcall GetTrainerDVs
-; These are the DVs we'll use if we're actually in a trainer battle
-	ld a, [wBattleMode]
-	dec a
-	jr nz, .UpdateDVs
+; Trainer DVs
+	ld a, [wCurPartyMon]
+	ld hl, wOTPartyMon1DVs
+	call GetPartyLocation
+	ld b, [hl]
+	inc hl
+	ld c, [hl]
+	jr .UpdateDVs
+
+.WildDVs:
 
 ; Wild DVs
 ; Here's where the fun starts
@@ -6804,16 +6809,15 @@ BadgeStatBoosts:
 .CheckBadge:
 	ld a, b
 	srl b
+	push af
 	call c, BoostStat
+	pop af
 	inc hl
 	inc hl
 ; Check every other badge.
 	srl b
 	dec c
 	jr nz, .CheckBadge
-; Check GlacierBadge again for Special Defense.
-; This check is buggy because it assumes that a is set by the "ld a, b" in the above loop,
-; but it can actually be overwritten by the call to BoostStat.
 	srl a
 	call c, BoostStat
 	ret

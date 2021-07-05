@@ -344,11 +344,10 @@ TeamRocketBaseB3FRocketText:
 RocketBaseRivalText:
 	text "…"
 
-	para "Didn't I tell you"
-	line "that I was going"
+	para "<PLAY_G>. I had a"
+	line "feeling I'd find"
 
-	para "to destroy TEAM"
-	line "ROCKET?"
+	para "you here."
 
 	para "…Tell me, who was"
 	line "the guy in the"
@@ -360,10 +359,10 @@ RocketBaseRivalText:
 	line "match at all."
 
 	para "I don't care that"
-	line "I lost. I can beat"
+	line "I lost. It's not"
 
-	para "him by getting"
-	line "stronger #MON."
+	para "the reason why I'm"
+	line "here."
 
 	para "It's what he said"
 	line "that bothers me…"
@@ -374,13 +373,13 @@ RocketBaseRivalText:
 	para "trust my #MON"
 	line "enough."
 
-	para "I'm furious that I"
-	line "lost to a bleeding"
-	cont "heart like him."
+	para "He doesn't know the"
+	line "first thing about"
+	cont "me."
 
 	para "…Humph! I don't"
 	line "have the time for"
-	cont "the likes of you!"
+	cont "this!"
 	done
 
 ExecutiveM4BeforeText:
@@ -592,7 +591,7 @@ TeamRocketBaseB3F_MapEvents:
 	def_object_events
 	object_event 25, 14, SPRITE_LANCE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, LanceGetPasswordScript, EVENT_TEAM_ROCKET_BASE_B3F_LANCE_PASSWORDS
 	object_event  8,  3, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_TEAM_ROCKET_BASE_B3F_EXECUTIVE
-	object_event  7,  2, SPRITE_MOLTRES, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, RocketBaseMurkrow, EVENT_TEAM_ROCKET_BASE_POPULATION
+	object_event  7,  2, SPRITE_MURKROW, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, RocketBaseMurkrow, EVENT_TEAM_ROCKET_BASE_POPULATION
 	object_event 21,  7, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 0, SlowpokeTailGrunt, EVENT_TEAM_ROCKET_BASE_POPULATION
 	object_event  5, 14, SPRITE_ROCKET, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 3, RaticateTailGrunt, EVENT_TEAM_ROCKET_BASE_POPULATION
 	object_event 23, 11, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 0, TrainerScientistRoss, EVENT_TEAM_ROCKET_BASE_POPULATION

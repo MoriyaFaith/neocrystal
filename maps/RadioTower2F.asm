@@ -448,25 +448,49 @@ GruntM6AfterBattleText:
 	done
 
 GruntF2SeenText:
-	text "Hahaha!"
+	text "It feels great"
+	line "to commit crimes."
 
-	para "How boring."
-	line "It was far too"
+	para "The thrill, the"
+	line "risk, everything!"
 
-	para "easy to take over"
-	line "this place!"
+	para "… … …"
 
-	para "Come on, keep me"
-	line "amused!"
+	para "Just wish I knew"
+	line "what I'm doing"
+	cont "here."
 	done
 
 GruntF2BeatenText:
-	text "Wh-who are you?"
+	text "You're kidding!"
+
+	para "I feel lousy over"
+	line "losing! Huh?"
+
+	para "The trainer who we"
+	line "stole this #MON"
+
+	para "from asked you to"
+	line "get it back?"
+
+	para "Well, I guess you"
+	line "beat me fair 'n"
+	cont "square, but…"
+
+	para "The little guy's"
+	line "grown a bit on me."
+
+	para "I'll think about"
+	line "it, though."
 	done
 
 GruntF2AfterBattleText:
-	text "You beat me, and"
-	line "I won't forget it!"
+	text "I wonder how many"
+	line "#MON ROCKET's"
+
+	para "sold… I don't even"
+	line "know who buys."
+
 	done
 
 RadioTower2FBuenaShowIntroductionText:

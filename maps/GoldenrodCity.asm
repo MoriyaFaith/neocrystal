@@ -1,3 +1,5 @@
+GOLDENRODCITY_MOVETUTOR_PRICE EQU 4000
+
 	object_const_def
 	const GOLDENRODCITY_POKEFAN_M1
 	const GOLDENRODCITY_YOUNGSTER1
@@ -32,20 +34,11 @@ GoldenrodCity_MapScripts:
 	endcallback
 
 .MoveTutor:
-	checkevent EVENT_BEAT_ELITE_FOUR
-	iffalse .MoveTutorDone
-	checkitem COIN_CASE
-	iffalse .MoveTutorDisappear
-	readvar VAR_WEEKDAY
-	ifequal WEDNESDAY, .MoveTutorAppear
-	ifequal SATURDAY, .MoveTutorAppear
-.MoveTutorDisappear:
-	disappear GOLDENRODCITY_MOVETUTOR
+	readvar VAR_BADGES
+	ifgreater NUM_JOHTO_BADGES - 3, .MoveTutorAppear
 	endcallback
 
 .MoveTutorAppear:
-	checkflag ENGINE_DAILY_MOVE_TUTOR
-	iftrue .MoveTutorDone
 	appear GOLDENRODCITY_MOVETUTOR
 .MoveTutorDone:
 	endcallback
@@ -56,11 +49,11 @@ MoveTutorScript:
 	writetext GoldenrodCityMoveTutorAskTeachAMoveText
 	yesorno
 	iffalse .Refused
-	special DisplayCoinCaseBalance
+	special PlaceMoneyTopRight
 	writetext GoldenrodCityMoveTutorAsk4000CoinsOkayText
 	yesorno
 	iffalse .Refused2
-	checkcoins 4000
+	checkmoney YOUR_MONEY, GOLDENRODCITY_MOVETUTOR_PRICE
 	ifequal HAVE_LESS, .NotEnoughMoney
 	writetext GoldenrodCityMoveTutorWhichMoveShouldITeachText
 	loadmenu .MoveMenuHeader
@@ -121,26 +114,13 @@ MoveTutorScript:
 .TeachMove:
 	writetext GoldenrodCityMoveTutorIfYouUnderstandYouveMadeItText
 	promptbutton
-	takecoins 4000
 	waitsfx
 	playsound SFX_TRANSACTION
-	special DisplayCoinCaseBalance
+	takemoney YOUR_MONEY, GOLDENRODCITY_MOVETUTOR_PRICE
+	special PlaceMoneyTopRight
 	writetext GoldenrodCityMoveTutorFarewellKidText
 	waitbutton
 	closetext
-	readvar VAR_FACING
-	ifequal LEFT, .WalkAroundPlayer
-	applymovement GOLDENRODCITY_MOVETUTOR, GoldenrodCityMoveTutorEnterGameCornerMovement
-	sjump .GoInside
-
-.WalkAroundPlayer:
-	applymovement GOLDENRODCITY_MOVETUTOR, GoldenrodCityMoveTutorWalkAroundPlayerThenEnterGameCornerMovement
-.GoInside:
-	playsound SFX_ENTER_DOOR
-	disappear GOLDENRODCITY_MOVETUTOR
-	clearevent EVENT_GOLDENROD_GAME_CORNER_MOVE_TUTOR
-	setflag ENGINE_DAILY_MOVE_TUTOR
-	waitsfx
 	end
 
 .Incompatible:
@@ -499,7 +479,7 @@ GoldenrodCityMoveTutorAskTeachAMoveText:
 
 GoldenrodCityMoveTutorAsk4000CoinsOkayText:
 	text "It will cost you"
-	line "4000 coins. Okay?"
+	line "¥4000. Okay?"
 	done
 
 GoldenrodCityMoveTutorAwwButTheyreAmazingText:
@@ -541,7 +521,7 @@ GoldenrodCityMoveTutorBButText:
 
 GoldenrodCityMoveTutorYouDontHaveEnoughCoinsText:
 	text "…You don't have"
-	line "enough coins here…"
+	line "enough money…"
 	done
 
 GoldenrodCityMoveTutorMoveText:
@@ -567,6 +547,7 @@ GoldenrodCity_MapEvents:
 	warp_event  9,  5, GOLDENROD_UNDERGROUND_SWITCH_ROOM_ENTRANCES, 8
 	warp_event 11, 29, GOLDENROD_UNDERGROUND_SWITCH_ROOM_ENTRANCES, 5
 	warp_event 15, 27, GOLDENROD_POKECENTER_1F, 1
+	warp_event 25,  7, GOLDENROD_GYM, 1
 
 	def_coord_events
 

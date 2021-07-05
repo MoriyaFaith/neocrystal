@@ -656,14 +656,18 @@ WaterfallFunction:
 
 CheckMapCanWaterfall:
 	ld a, [wPlayerDirection]
-	and $c
+	and FACE_UP | FACE_DOWN
 	cp FACE_UP
 	jr nz, .failed
+	ld a, [wTilePermissions]
+	and FACE_UP
+	jr nz, .failed
 	ld a, [wTileUp]
-	call CheckWaterfallTile
+	cp COLL_WATERFALL
 	jr nz, .failed
 	xor a
 	ret
+
 
 .failed
 	scf

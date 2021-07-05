@@ -1406,20 +1406,15 @@ BattleCheckTypeMatchup:
 	ld hl, wEnemyMonType1
 	ldh a, [hBattleTurn]
 	and a
-	jr z, CheckTypeMatchup
+	jr z, .get_type
 	ld hl, wBattleMonType1
+.get_type
+	ld a, BATTLE_VARS_MOVE_TYPE
+	call GetBattleVar ; preserves hl, de, and bc
 CheckTypeMatchup:
-; There is an incorrect assumption about this function made in the AI related code: when
-; the AI calls CheckTypeMatchup (not BattleCheckTypeMatchup), it assumes that placing the
-; offensive type in a will make this function do the right thing. Since a is overwritten,
-; this assumption is incorrect. A simple fix would be to load the move type for the
-; current move into a in BattleCheckTypeMatchup, before falling through, which is
-; consistent with how the rest of the code assumes this code works like.
 	push hl
 	push de
 	push bc
-	ld a, BATTLE_VARS_MOVE_TYPE
-	call GetBattleVar
 	ld d, a
 	ld b, [hl]
 	inc hl
@@ -2611,6 +2606,11 @@ PlayerAttackDamage:
 	jr .thickclub
 
 .special
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_ELEMENTAL_PUNCH
+	jr z, .elepunch
+
 	ld hl, wEnemyMonSpclDef
 	ld a, [hli]
 	ld b, a
@@ -2632,6 +2632,29 @@ PlayerAttackDamage:
 	ld b, a
 	ld c, [hl]
 	ld hl, wPlayerSpAtk
+	
+.elepunch
+	ld hl, wEnemyMonSpclDef
+	ld a, [hli]
+	ld b, a
+	ld c, [hl]
+
+	ld a, [wEnemyScreens]
+	bit SCREENS_LIGHT_SCREEN, a
+	jr z, .elepunchcrit
+	sla c
+	rl b
+
+.elepunchcrit
+	ld hl, wBattleMonAttack
+	call CheckDamageStatsCritical
+	jr c, .thickclub
+
+	ld hl, wEnemySpDef
+	ld a, [hli]
+	ld b, a
+	ld c, [hl]
+	ld hl, wPlayerAttack
 
 .lightball
 ; Note: Returns player special attack at hl in hl.

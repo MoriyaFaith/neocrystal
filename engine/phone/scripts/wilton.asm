@@ -4,16 +4,21 @@ WiltonPhoneCalleeScript:
 	iftrue .WantsBattle
 	farscall PhoneScript_AnswerPhone_Male
 	checkflag ENGINE_WILTON_THURSDAY_MORNING
-	iftrue .NotThursday
+	iftrue .CheckSwarm
 	checkflag ENGINE_WILTON_HAS_ITEM
 	iftrue .HasItem
 	readvar VAR_WEEKDAY
-	ifnotequal THURSDAY, .NotThursday
+	ifnotequal THURSDAY, .CheckSwarm
 	checktime MORN
 	iftrue WiltonThursdayMorning
-
-.NotThursday:
+.CheckSwarm:
+	checkflag ENGINE_FISH_SWARM
+	iftrue .ReportSwarm
 	farsjump WiltonHaventFoundAnythingScript
+
+.ReportSwarm:
+	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_44
+	farsjump WiltonHurryScript
 
 .WantsBattle:
 	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_44
@@ -27,15 +32,19 @@ WiltonPhoneCallerScript:
 	gettrainername STRING_BUFFER_3, FISHER, WILTON1
 	farscall PhoneScript_GreetPhone_Male
 	checkflag ENGINE_WILTON_READY_FOR_REMATCH
-	iftrue .GenericCall
+	iftrue .CheckSwarm
 	checkflag ENGINE_WILTON_THURSDAY_MORNING
-	iftrue .GenericCall
+	iftrue .CheckSwarm
 	checkflag ENGINE_WILTON_HAS_ITEM
-	iftrue .GenericCall
+	iftrue .CheckSwarm
 	farscall PhoneScript_Random2
 	ifequal 0, WiltonWantsBattle
 	farscall PhoneScript_Random2
 	ifequal 0, WiltonHasItem
+.CheckSwarm:
+	farscall PhoneScript_Random5
+	ifequal 0, Wilton_SetUpSwarm
+	farsjump Phone_GenericCall_Male
 
 .GenericCall:
 	farsjump Phone_GenericCall_Male
@@ -73,3 +82,16 @@ WiltonHasItem:
 
 .FoundItem:
 	farsjump PhoneScript_FoundItem_Male
+
+Wilton_SetUpSwarm:
+	checkflag ENGINE_FISH_SWARM
+	iftrue .Generic
+	setflag ENGINE_FISH_SWARM
+	getmonname STRING_BUFFER_4, REMORAID
+	getlandmarkname STRING_BUFFER_5, LANDMARK_ROUTE_44
+	setval FISHSWARM_REMORAID
+	special ActivateFishingSwarm
+	farsjump WiltonItemScript
+
+.Generic:
+	farsjump Phone_GenericCall_Male

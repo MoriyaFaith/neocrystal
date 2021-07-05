@@ -501,4 +501,10 @@ ENDM
 	map_const ROUTE_31_VIOLET_GATE,                         5,  4 ; 11
 	endgroup
 
+	newgroup HGSS_ROUTES
+	map_const ROUTE_47,									   39, 19
+	map_const ROUTE_48,									   18, 11
+	map_const CLIFF_CAVE,								    6, 18
+	endgroup
+
 NUM_MAP_GROUPS EQU const_value ; 26

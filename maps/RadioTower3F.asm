@@ -250,21 +250,25 @@ GruntM7AfterBattleText:
 	done
 
 GruntM8SeenText:
-	text "It feels great"
-	line "ordering #MON"
-	cont "to commit crimes."
+	text "Hahaha!"
+
+	para "How boring."
+	line "It was far too"
+
+	para "easy to take over"
+	line "this place!"
+
+	para "Come on, keep me"
+	line "amused!"
 	done
 
 GruntM8BeatenText:
-	text "You're kidding!"
+	text "Wh-who are you?"
 	done
 
 GruntM8AfterBattleText:
-	text "I feel lousy over"
-	line "losing!"
-
-	para "Darn it! I hate"
-	line "useless #MON!"
+	text "You beat me, and"
+	line "I won't forget it!"
 	done
 
 GruntM9SeenText:

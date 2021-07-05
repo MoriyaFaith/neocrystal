@@ -201,7 +201,7 @@ OlivineGym_MapEvents:
 
 	def_warp_events
 	warp_event  4, 15, OLIVINE_CITY, 2
-	warp_event  5, 15, OLIVINE_CITY, 2
+	warp_event  5, 15, OLIVINE_CITY, 12
 
 	def_coord_events
 

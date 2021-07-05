@@ -382,7 +382,7 @@ GoldenrodGym_MapEvents:
 
 	def_warp_events
 	warp_event  2, 17, GOLDENROD_CITY, 1
-	warp_event  3, 17, GOLDENROD_CITY, 1
+	warp_event  3, 17, GOLDENROD_CITY, 16
 
 	def_coord_events
 	coord_event  8,  5, SCENE_GOLDENRODGYM_WHITNEY_STOPS_CRYING, WhitneyCriesScript

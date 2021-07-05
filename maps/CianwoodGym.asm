@@ -308,7 +308,7 @@ CianwoodGym_MapEvents:
 
 	def_warp_events
 	warp_event  4, 17, CIANWOOD_CITY, 2
-	warp_event  5, 17, CIANWOOD_CITY, 2
+	warp_event  5, 17, CIANWOOD_CITY, 9
 
 	def_coord_events
 

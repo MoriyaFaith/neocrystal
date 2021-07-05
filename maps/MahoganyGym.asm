@@ -375,7 +375,7 @@ MahoganyGym_MapEvents:
 
 	def_warp_events
 	warp_event  4, 17, MAHOGANY_TOWN, 3
-	warp_event  5, 17, MAHOGANY_TOWN, 3
+	warp_event  5, 17, MAHOGANY_TOWN, 6
 
 	def_coord_events
 

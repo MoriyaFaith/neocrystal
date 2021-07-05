@@ -364,7 +364,7 @@ AzaleaGym_MapEvents:
 
 	def_warp_events
 	warp_event  4, 15, AZALEA_TOWN, 5
-	warp_event  5, 15, AZALEA_TOWN, 5
+	warp_event  5, 15, AZALEA_TOWN, 9
 
 	def_coord_events
 

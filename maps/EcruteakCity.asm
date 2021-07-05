@@ -275,7 +275,7 @@ EcruteakCity_MapEvents:
 	warp_event  5,  5, BURNED_TOWER_1F, 1
 	warp_event  0, 18, ROUTE_38_ECRUTEAK_GATE, 3
 	warp_event  0, 19, ROUTE_38_ECRUTEAK_GATE, 4
-	warp_event  7, 27, ECRUTEAK_GYM, 1
+	warp_event  7, 27, ECRUTEAK_GYM, 2
 
 	def_coord_events
 

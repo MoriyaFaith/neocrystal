@@ -284,7 +284,7 @@ VioletGym_MapEvents:
 
 	def_warp_events
 	warp_event  4, 15, VIOLET_CITY, 2
-	warp_event  5, 15, VIOLET_CITY, 2
+	warp_event  5, 15, VIOLET_CITY, 10
 
 	def_coord_events
 

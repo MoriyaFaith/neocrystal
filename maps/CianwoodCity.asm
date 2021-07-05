@@ -389,7 +389,7 @@ CianwoodCity_MapEvents:
 	warp_event 15, 37, CIANWOOD_LUGIA_SPEECH_HOUSE, 1
 	warp_event  5, 17, POKE_SEERS_HOUSE, 1
 	warp_event 10, 13, ROUTE_47, 1
-	warp_event  9, 43, CIANWOOD_GYM, 1
+	warp_event  9, 43, CIANWOOD_GYM, 2
 
 	def_coord_events
 	coord_event 11, 16, SCENE_CIANWOODCITY_SUICUNE_AND_EUSINE, CianwoodCitySuicuneAndEusine

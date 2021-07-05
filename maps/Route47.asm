@@ -76,11 +76,11 @@ Route47TileScript:
 
 Route47_FinishOverheadBridge:
 	xor a
-	jr Route47_FinishBridge
+	ld [wRoute47SceneID], a ; setscene a
+	ret
 
 Route47_FinishUnderfootBridge:
 	ld a, $1
-Route47_FinishBridge:
 	ld [wRoute47SceneID], a ; setscene a
 	call GetMovementPermissions
 	call RefreshScreen ; refreshscreen

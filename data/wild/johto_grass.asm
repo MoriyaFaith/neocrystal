@@ -1685,29 +1685,29 @@ JohtoGrassWildMons:
 	def_grass_wildmons ROUTE_47
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 23, GEODUDE
-	db 23, GRAVELER
-	db 24, GLIGAR
-	db 25, DONPHAN
-	db 20, PHANPY
-	db 27, SKARMORY
-	db 27, SKARMORY
+	db 41, DITTO
+	db 41, FARFETCH_D
+	db 42, MILTANK
+	db 43, GLOOM
+	db 38, RATICATE
+	db 45, FEAROW
+	db 45, FEAROW
 	; day
-	db 23, GEODUDE
-	db 23, GRAVELER
-	db 24, GLIGAR
-	db 25, DONPHAN
-	db 30, DONPHAN
-	db 27, SKARMORY
-	db 27, SKARMORY
+	db 41, DITTO
+	db 41, FARFETCH_D
+	db 42, MILTANK
+	db 43, GLOOM
+	db 38, RATICATE
+	db 45, FEAROW
+	db 45, FEAROW
 	; nite
-	db 23, GEODUDE
-	db 23, GRAVELER
-	db 24, GLIGAR
-	db 25, GRAVELER
-	db 27, GRAVELER
-	db 27, GRAVELER
-	db 27, GRAVELER
+	db 41, DITTO
+	db 41, NOCTOWL
+	db 42, MILTANK
+	db 43, GLOOM
+	db 38, RATICATE
+	db 45, FEAROW
+	db 45, FEAROW
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_48

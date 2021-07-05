@@ -81,9 +81,10 @@ Route47_FinishOverheadBridge:
 Route47_FinishUnderfootBridge:
 	ld a, $1
 Route47_FinishBridge:
-	ld [wWalkingOnBridge], a
 	ld [wRoute47SceneID], a ; setscene a
-	jp GenericFinishBridge
+	call GetMovementPermissions
+	call RefreshScreen ; refreshscreen
+	ret
 
 Route47Bridge1OverheadTrigger:
 	callthisasm

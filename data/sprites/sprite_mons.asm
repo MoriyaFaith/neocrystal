@@ -31,7 +31,7 @@ SpriteMons:
 	db VOLTORB
 	db LAPRAS
 	db RHYDON
-	db MOLTRES
+	db FARFETCH_D
 	db SNORLAX
 	db GYARADOS
 	db LUGIA
@@ -42,4 +42,8 @@ SpriteMons:
 	db MEOWTH
 	db DRATINI
 	db ABRA
+	db MILTANK
+	db AMPHAROS
+	db PERSIAN
+	db PIDGEY
 	assert_table_length NUM_POKEMON_SPRITES

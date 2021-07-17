@@ -256,9 +256,9 @@ TrainerCard_PrintTopHalfOfCard:
 	ret
 
 .Name_Money:
-	db   "NAME/"
+	db   "NAME:"
 	next ""
-	next "MONEY@"
+	next "MONEY:@"
 
 .ID_No:
 	db $27, $28, -1 ; ID NO

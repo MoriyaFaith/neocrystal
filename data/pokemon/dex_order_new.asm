@@ -1,7 +1,6 @@
 ; Every Pokémon sorted in New Pokédex Order.
 
 NewPokedexOrder:
-	table_width 1, NewPokedexOrder
 	db CHIKORITA
 	db BAYLEEF
 	db MEGANIUM
@@ -207,38 +206,7 @@ NewPokedexOrder:
 	db DONPHAN
 	db MANTINE
 	db SKARMORY
-	db DODUO
-	db DODRIO
-	db PONYTA
-	db RAPIDASH
-	db CUBONE
-	db MAROWAK
-	db KANGASKHAN
-	db RHYHORN
-	db RHYDON
-	db PORYGON
-	db PORYGON2
-	db CHANSEY
-	db BLISSEY
 	db LAPRAS
-	db OMANYTE
-	db OMASTAR
-	db KABUTO
-	db KABUTOPS
-	db AERODACTYL
-	db SNORLAX
-	db BULBASAUR
-	db IVYSAUR
-	db VENUSAUR
-	db CHARMANDER
-	db CHARMELEON
-	db CHARIZARD
-	db SQUIRTLE
-	db WARTORTLE
-	db BLASTOISE
-	db ARTICUNO
-	db ZAPDOS
-	db MOLTRES
 	db RAIKOU
 	db ENTEI
 	db SUICUNE
@@ -250,7 +218,5 @@ NewPokedexOrder:
 	db TYRANITAR
 	db LUGIA
 	db HO_OH
-	db MEWTWO
-	db MEW
 	db CELEBI
-	assert_table_length NUM_POKEMON
+	db 0		  ; End of Pokedex

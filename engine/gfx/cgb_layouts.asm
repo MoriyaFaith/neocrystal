@@ -256,7 +256,7 @@ INCLUDE "gfx/stats/stats.pal"
 
 _CGB_Pokedex:
 	ld de, wBGPals1
-	ld a, PREDEFPAL_POKEDEX
+	call CheckPokedexColor
 	call GetPredefPal
 	call LoadHLPaletteIntoDE ; dex interface palette
 	ld a, [wCurPartySpecies]
@@ -293,9 +293,69 @@ INCLUDE "gfx/pokedex/question_mark.pal"
 PokedexCursorPalette:
 INCLUDE "gfx/pokedex/cursor.pal"
 
+
+CheckPokedexColor:
+	ld a, [wCurPokedexColor]
+	cp DEXCOLOR_BLUE
+	jr nz, .Purple
+	ld a, PREDEFPAL_TRADE_TUBE
+	ret
+
+.Purple
+	cp DEXCOLOR_PURPLE
+	jr nz, .Brown
+	ld a, PREDEFPAL_RB_PURPLEMON
+	ret
+
+.Brown
+	cp DEXCOLOR_BROWN
+	jr nz, .Green
+	ld a, PREDEFPAL_RB_BROWNMON
+	ret
+
+.Green
+	cp DEXCOLOR_GREEN
+	jr nz, .Pink
+	ld a, PREDEFPAL_RB_GREENMON
+	ret
+
+.Pink
+	cp DEXCOLOR_PINK
+	jr nz, .Yellow
+	ld a, PREDEFPAL_RB_PINKMON
+	ret
+
+.Yellow
+	cp DEXCOLOR_YELLOW
+	jr nz, .Cyan
+	ld a, PREDEFPAL_RB_YELLOWMON
+	ret
+
+.Cyan
+	cp DEXCOLOR_CYAN
+	jr nz, .Gray
+	ld a, PREDEFPAL_RB_CYANMON
+	ret
+
+.Gray
+	cp DEXCOLOR_GRAY
+	jr nz, .Mewtwo
+	ld a, PREDEFPAL_CGB_BADGE
+	ret
+
+.Mewtwo
+	cp DEXCOLOR_MEWTWO
+	jr nz, .Red
+	ld a, PREDEFPAL_DIPLOMA
+	ret
+
+.Red
+	ld a, PREDEFPAL_POKEDEX
+	ret
+
 _CGB_BillsPC:
 	ld de, wBGPals1
-	ld a, PREDEFPAL_POKEDEX
+	call CheckPokedexColor
 	call GetPredefPal
 	call LoadHLPaletteIntoDE
 	ld a, [wCurPartySpecies]
@@ -349,7 +409,7 @@ INCLUDE "gfx/pc/orange.pal"
 
 _CGB_PokedexUnownMode:
 	ld de, wBGPals1
-	ld a, PREDEFPAL_POKEDEX
+	call CheckPokedexColor
 	call GetPredefPal
 	call LoadHLPaletteIntoDE
 	ld a, [wCurPartySpecies]
@@ -640,9 +700,10 @@ _CGB_TrainerCard:
 	ld a, PRYCE ; CHUCK
 	call GetTrainerPalettePointer
 	call LoadPalette_White_Col1_Col2_Black
-	ld a, PREDEFPAL_CGB_BADGE
-	call GetPredefPal
-	call LoadHLPaletteIntoDE
+	ld hl, .BadgePalettes
+	ld bc, 8 palettes
+	ld a, BANK(wOBPals1)
+	call FarCopyWRAM
 
 	; fill screen with opposite-gender palette for the card border
 	hlcoord 0, 0, wAttrmap
@@ -664,36 +725,36 @@ _CGB_TrainerCard:
 	ld a, $1 ; kris
 .got_gender2
 	call FillBoxCGB
-	hlcoord 2, 11, wAttrmap
-	lb bc, 2, 4
+	hlcoord 3, 10, wAttrmap
+	lb bc, 3, 3
 	ld a, $5 ; falkner
 	call FillBoxCGB
-	hlcoord 6, 11, wAttrmap
-	lb bc, 2, 4
+	hlcoord 7, 10, wAttrmap
+	lb bc, 3, 3
 	ld a, $2 ; bugsy
 	call FillBoxCGB
-	hlcoord 10, 11, wAttrmap
-	lb bc, 2, 4
+	hlcoord 11, 10, wAttrmap
+	lb bc, 3, 3
 	ld a, $3 ; whitney
 	call FillBoxCGB
-	hlcoord 14, 11, wAttrmap
-	lb bc, 2, 4
+	hlcoord 15, 10, wAttrmap
+	lb bc, 3, 3
 	ld a, $4 ; morty
 	call FillBoxCGB
-	hlcoord 2, 14, wAttrmap
-	lb bc, 2, 4
+	hlcoord 3, 13, wAttrmap
+	lb bc, 3, 3
 	ld a, $7 ; chuck
 	call FillBoxCGB
-	hlcoord 6, 14, wAttrmap
-	lb bc, 2, 4
+	hlcoord 7, 13, wAttrmap
+	lb bc, 3, 3
 	ld a, $6 ; jasmine
 	call FillBoxCGB
-	hlcoord 10, 14, wAttrmap
-	lb bc, 2, 4
+	hlcoord 11, 13, wAttrmap
+	lb bc, 3, 3
 	ld a, $7 ; pryce
 	call FillBoxCGB
-	hlcoord 14, 14, wAttrmap
-	lb bc, 2, 4
+	hlcoord 15, 13, wAttrmap
+	lb bc, 3, 3
 	ld a, $5 ; clair
 	call FillBoxCGB
 	; top-right corner still uses the border's palette
@@ -710,6 +771,9 @@ _CGB_TrainerCard:
 	ld a, TRUE
 	ldh [hCGBPalUpdate], a
 	ret
+
+.BadgePalettes:
+INCLUDE "gfx/trainer_card/badges.pal"
 
 _CGB_MoveList:
 	ld de, wBGPals1
@@ -747,7 +811,7 @@ _CGB_BetaPikachuMinigame:
 
 _CGB_PokedexSearchOption:
 	ld de, wBGPals1
-	ld a, PREDEFPAL_POKEDEX
+	call CheckPokedexColor
 	call GetPredefPal
 	call LoadHLPaletteIntoDE
 	call WipeAttrmap

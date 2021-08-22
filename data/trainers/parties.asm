@@ -1283,7 +1283,7 @@ PokemaniacGroup:
 
 GruntMGroup:
 	; GRUNTM (1)
-	db "GRUNT@", TRAINERTYPE_NORMAL
+	db "PROTON@", TRAINERTYPE_NORMAL
 	db 16, KOFFING
 	db -1 ; end
 

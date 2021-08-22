@@ -2876,6 +2876,11 @@ EnemyAttackDamage:
 	jr .thickclub
 
 .special
+	ld a, BATTLE_VARS_MOVE_EFFECT
+	call GetBattleVar
+	cp EFFECT_ELEMENTAL_PUNCH
+	jr z, .elepunch
+
 	ld hl, wBattleMonSpclDef
 	ld a, [hli]
 	ld b, a
@@ -2896,6 +2901,29 @@ EnemyAttackDamage:
 	ld b, a
 	ld c, [hl]
 	ld hl, wEnemySpAtk
+
+.elepunch
+	ld hl, wBattleMonSpclDef
+	ld a, [hli]
+	ld b, a
+	ld c, [hl]
+
+	ld a, [wPlayerScreens]
+	bit SCREENS_LIGHT_SCREEN, a
+	jr z, .elepunchcrit
+	sla c
+	rl b
+
+.elepunchcrit
+	ld hl, wEnemyMonAttack
+	call CheckDamageStatsCritical
+	jr c, .lightball
+	ld hl, wPlayerSpDef
+	ld a, [hli]
+	ld b, a
+	ld c, [hl]
+	ld hl, wEnemySpAtk
+
 
 .lightball
 	call LightBallBoost

@@ -943,7 +943,7 @@ Intro_PlacePlayerSprite:
 	ld a, [wPlayerGender]
 	bit PLAYERGENDER_FEMALE_F, a
 	jr z, .male
-	ld b, PAL_OW_PINK
+	ld b, PAL_OW_BLUE
 .male
 	ld a, b
 

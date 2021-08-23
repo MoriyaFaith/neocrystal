@@ -8,7 +8,7 @@ EvolutionMoves::
 	db WING_ATTACK  ; CHARIZARD  ; 06
 	db NO_MOVE      ; SQUIRTLE   ; 07
 	db NO_MOVE      ; WARTORTLE  ; 08
-	db NO_MOVE      ; BLASTOISE  ; 09
+	db METAL_CLAW   ; BLASTOISE  ; 09
 	db NO_MOVE      ; CATERPIE   ; 0a
 	db HARDEN       ; METAPOD    ; 0b
 	db CONFUSION    ; BUTTERFREE ; 0c

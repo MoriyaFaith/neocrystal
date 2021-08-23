@@ -106,6 +106,17 @@
 	const SPRITE_STANDING_YOUNGSTER ; 66
 	const SPRITE_CHRIS_SURF
 	const SPRITE_KRIS_SURF
+	const SPRITE_SCHOOLBOY ; 00
+	const SPRITE_BIRD_KEEPER ; 01
+	const SPRITE_BOARDER ; 02
+	const SPRITE_SKIER ; 03
+	const SPRITE_BURGLAR ; 04
+	const SPRITE_CAMPER ; 05
+	const SPRITE_FIREBREATHER ; 06
+	const SPRITE_HIKER ; 07
+	const SPRITE_PICNICKER ; 08
+	const SPRITE_POKEMANIAC ; 09
+	const SPRITE_PSYCHIC ; 0a
 NUM_OVERWORLD_SPRITES EQU const_value - 1
 
 ; SpriteMons indexes (see data/sprites/sprite_mons.asm)

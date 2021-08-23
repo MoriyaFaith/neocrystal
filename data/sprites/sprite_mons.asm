@@ -46,4 +46,5 @@ SpriteMons:
 	db AMPHAROS
 	db PERSIAN
 	db PIDGEY
+	db RATTATA
 	assert_table_length NUM_POKEMON_SPRITES

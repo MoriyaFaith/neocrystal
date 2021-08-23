@@ -31,8 +31,8 @@ FuchsiaGymJanineScript:
 	setevent EVENT_BEAT_CAMPER_BARRY
 	variablesprite SPRITE_FUCHSIA_GYM_1, SPRITE_LASS
 	variablesprite SPRITE_FUCHSIA_GYM_2, SPRITE_LASS
-	variablesprite SPRITE_FUCHSIA_GYM_3, SPRITE_LASS
-	variablesprite SPRITE_FUCHSIA_GYM_4, SPRITE_YOUNGSTER
+	variablesprite SPRITE_FUCHSIA_GYM_3, SPRITE_PICNICKER
+	variablesprite SPRITE_FUCHSIA_GYM_4, SPRITE_CAMPER
 	special LoadUsedSpritesGFX
 	opentext
 	writetext Text_ReceivedSoulBadge
@@ -130,7 +130,7 @@ PicnickerCindyScript:
 	iftrue .CindyUnmasked
 	applymovement FUCHSIAGYM_FUCHSIA_GYM_3, Movement_NinjaSpin
 	faceplayer
-	variablesprite SPRITE_FUCHSIA_GYM_3, SPRITE_LASS
+	variablesprite SPRITE_FUCHSIA_GYM_3, SPRITE_PICNICKER
 	special LoadUsedSpritesGFX
 .CindyUnmasked:
 	faceplayer
@@ -164,7 +164,7 @@ CamperBarryScript:
 	iftrue .BarryUnmasked
 	applymovement FUCHSIAGYM_FUCHSIA_GYM_4, Movement_NinjaSpin
 	faceplayer
-	variablesprite SPRITE_FUCHSIA_GYM_4, SPRITE_YOUNGSTER
+	variablesprite SPRITE_FUCHSIA_GYM_4, SPRITE_CAMPER
 	special LoadUsedSpritesGFX
 .BarryUnmasked:
 	faceplayer

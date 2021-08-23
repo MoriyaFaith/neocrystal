@@ -3,7 +3,11 @@
 	db  38,  41,  40,  65,  50,  65
 	;   hp  atk  def  spd  sat  sdf
 
+if DEF(FAITHFUL)
 	db FIRE, FIRE ; type
+else
+	db FIRE, GHOST ; type
+endc
 	db 190 ; catch rate
 	db 63 ; base exp
 	db BURNT_BERRY, BURNT_BERRY ; items

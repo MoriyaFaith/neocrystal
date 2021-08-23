@@ -1,4 +1,4 @@
-roms := neocrystal.gbc neocrystal11.gbc neocrystal_au.gbc neocrystal_debug.gbc neocrystal11_debug.gbc
+roms := neocrystal.gbc neocrystal_faithful.gbc neocrystal11.gbc neocrystal_au.gbc neocrystal_debug.gbc neocrystal11_debug.gbc
 
 rom_obj := \
 audio.o \
@@ -19,6 +19,7 @@ gfx/tilesets.o \
 lib/mobile/main.o
 
 neocrystal_obj         := $(rom_obj:.o=.o)
+neocrystal_faithful_obj:= $(rom_obj:.o=_faithful.o)
 neocrystal11_obj       := $(rom_obj:.o=11.o)
 neocrystal_au_obj      := $(rom_obj:.o=_au.o)
 neocrystal_debug_obj   := $(rom_obj:.o=_debug.o)
@@ -43,13 +44,14 @@ RGBLINK ?= $(RGBDS)rgblink
 ### Build targets
 
 .SUFFIXES:
-.PHONY: all crystal crystal11 crystal_au crystal_debug crystal11_debug clean tidy compare tools
+.PHONY: all crystal faithful crystal11 crystal_au crystal_debug crystal11_debug clean tidy compare tools
 .SECONDEXPANSION:
 .PRECIOUS:
 .SECONDARY:
 
-all: crystal
+all: crystal faithful
 crystal:         neocrystal.gbc
+faithful:        neocrystal_faithful.gbc
 crystal11:       neocrystal11.gbc
 crystal_au:      neocrystal_au.gbc
 crystal_debug:   neocrystal_debug.gbc
@@ -60,7 +62,7 @@ clean: tidy
 	find gfx/pokemon -mindepth 1 ! -path "gfx/pokemon/unown/*" \( -name "bitmask.asm" -o -name "frames.asm" -o -name "front.animated.tilemap" -o -name "front.dimensions" \) -delete
 
 tidy:
-	rm -f $(roms) $(neocrystal_obj) $(neocrystal11_obj) $(neocrystal_au_obj) $(neocrystal_debug_obj) $(neocrystal11_debug_obj) $(roms:.gbc=.map) $(roms:.gbc=.sym) rgbdscheck.o
+	rm -f $(roms) $(neocrystal_obj) $(neocrystal_faithful_obj) $(neocrystal11_obj) $(neocrystal_au_obj) $(neocrystal_debug_obj) $(neocrystal11_debug_obj) $(roms:.gbc=.map) $(roms:.gbc=.sym) rgbdscheck.o
 	$(MAKE) clean -C tools/
 
 compare: $(roms)
@@ -76,11 +78,12 @@ ifeq ($(DEBUG),1)
 RGBASMFLAGS += -E
 endif
 
-$(neocrystal_obj):         RGBASMFLAGS +=
-$(neocrystal11_obj):       RGBASMFLAGS += -D _CRYSTAL11
-$(neocrystal_au_obj):      RGBASMFLAGS += -D _CRYSTAL11 -D _CRYSTAL_AU
-$(neocrystal_debug_obj):   RGBASMFLAGS += -D _DEBUG
-$(neocrystal11_debug_obj): RGBASMFLAGS += -D _CRYSTAL11 -D _DEBUG
+$(neocrystal_obj):          RGBASMFLAGS +=
+$(neocrystal_faithful_obj): RGBASMFLAGS += -D _FAITHFUL
+$(neocrystal11_obj):        RGBASMFLAGS += -D _CRYSTAL11
+$(neocrystal_au_obj):       RGBASMFLAGS += -D _CRYSTAL11 -D _CRYSTAL_AU
+$(neocrystal_debug_obj):    RGBASMFLAGS += -D _DEBUG
+$(neocrystal11_debug_obj):  RGBASMFLAGS += -D _CRYSTAL11 -D _DEBUG
 
 rgbdscheck.o: rgbdscheck.asm
 	$(RGBASM) -o $@ $<
@@ -101,6 +104,7 @@ $(info $(shell $(MAKE) -C tools))
 
 # Dependencies for shared objects objects
 $(foreach obj, $(neocrystal_obj), $(eval $(call DEP,$(obj),$(obj:.o=.asm))))
+$(foreach obj, $(neocrystal_faithful_obj), $(eval $(call DEP,$(obj),$(obj:_faithful.o=.asm))))
 $(foreach obj, $(neocrystal11_obj), $(eval $(call DEP,$(obj),$(obj:11.o=.asm))))
 $(foreach obj, $(neocrystal_au_obj), $(eval $(call DEP,$(obj),$(obj:_au.o=.asm))))
 $(foreach obj, $(neocrystal_debug_obj), $(eval $(call DEP,$(obj),$(obj:_debug.o=.asm))))
@@ -109,17 +113,19 @@ $(foreach obj, $(neocrystal11_debug_obj), $(eval $(call DEP,$(obj),$(obj:11_debu
 endif
 
 
-neocrystal_opt         = -Cjv -t PM_CRYSTAL -i BYTE -n 0 -k 01 -l 0x33 -m 0x10 -r 3 -p 0
-neocrystal11_opt       = -Cjv -t PM_CRYSTAL -i BYTE -n 1 -k 01 -l 0x33 -m 0x10 -r 3 -p 0
-neocrystal_au_opt      = -Cjv -t PM_CRYSTAL -i BYTU -n 0 -k 01 -l 0x33 -m 0x10 -r 3 -p 0
-neocrystal_debug_opt   = -Cjv -t PM_CRYSTAL -i BYTE -n 0 -k 01 -l 0x33 -m 0x10 -r 3 -p 0
-neocrystal11_debug_opt = -Cjv -t PM_CRYSTAL -i BYTE -n 1 -k 01 -l 0x33 -m 0x10 -r 3 -p 0
+neocrystal_opt          = -Cjv -t PM_CRYSTAL -i BYTE -n 0 -k 01 -l 0x33 -m 0x10 -r 3 -p 0
+neocrystal_faithful_opt = -Cjv -t PM_CRYSTAL -i BYTE -n 0 -k 01 -l 0x33 -m 0x10 -r 3 -p 0
+neocrystal11_opt        = -Cjv -t PM_CRYSTAL -i BYTE -n 1 -k 01 -l 0x33 -m 0x10 -r 3 -p 0
+neocrystal_au_opt       = -Cjv -t PM_CRYSTAL -i BYTU -n 0 -k 01 -l 0x33 -m 0x10 -r 3 -p 0
+neocrystal_debug_opt    = -Cjv -t PM_CRYSTAL -i BYTE -n 0 -k 01 -l 0x33 -m 0x10 -r 3 -p 0
+neocrystal11_debug_opt  = -Cjv -t PM_CRYSTAL -i BYTE -n 1 -k 01 -l 0x33 -m 0x10 -r 3 -p 0
 
-neocrystal_base         = us
-neocrystal11_base       = us
-neocrystal_au_base      = us
-neocrystal_debug_base   = dbg
-neocrystal11_debug_base = dbg
+neocrystal_base          = us
+neocrystal_faithful_base = us
+neocrystal11_base        = us
+neocrystal_au_base       = us
+neocrystal_debug_base    = dbg
+neocrystal11_debug_base  = dbg
 
 %.gbc: $$(%_obj) layout.link
 	$(RGBLINK) -n $*.sym -m $*.map -l layout.link -o $@ $(filter %.o,$^)

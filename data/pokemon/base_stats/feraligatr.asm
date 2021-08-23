@@ -1,7 +1,12 @@
 	db FERALIGATR ; 160
 
+if DEF(FAITHFUL)
 	db  85, 105, 100,  78,  79,  83
 	;   hp  atk  def  spd  sat  sdf
+else
+	db  85, 110,  73,  79,  73,  83
+	;   hp  atk  def  spd  sat  sdf
+endc
 
 	db WATER, WATER ; type
 	db 45 ; catch rate

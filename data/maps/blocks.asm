@@ -486,7 +486,6 @@ RuinsOfAlphInnerChamber_Blocks:
 
 RuinsOfAlphHoOhChamber_Blocks:
 RuinsOfAlphKabutoChamber_Blocks:
-RuinsOfAlphOmanyteChamber_Blocks:
 RuinsOfAlphAerodactylChamber_Blocks:
 	INCBIN "maps/RuinsOfAlphPuzzleChamber.ablk"
 
@@ -1056,3 +1055,7 @@ Route48_Blocks:
 
 CliffCave_Blocks:
 	INCBIN "maps/CliffCave.ablk"
+
+RuinsOfAlphOmanyteChamber_Blocks:
+	INCBIN "maps/RuinsOfAlphOmanyteChamber.ablk"
+

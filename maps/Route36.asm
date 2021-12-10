@@ -672,7 +672,7 @@ Route36_MapEvents:
 
 	def_bg_events
 	bg_event 29,  1, BGEVENT_READ, Route36TrainerTips2
-	bg_event 45, 11, BGEVENT_READ, RuinsOfAlphNorthSign
+	bg_event 45, 13, BGEVENT_READ, RuinsOfAlphNorthSign
 	bg_event 55,  7, BGEVENT_READ, Route36Sign
 	bg_event 21,  7, BGEVENT_READ, Route36TrainerTips1
 

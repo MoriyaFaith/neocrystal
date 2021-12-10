@@ -29,8 +29,8 @@ RuinsOfAlphOmanyteChamber_MapScripts:
 	endcallback
 
 .FloorClosed:
-	changeblock 2, 2, $01 ; left floor
-	changeblock 4, 2, $02 ; right floor
+	changeblock 2, 8, $36 ; left floor
+	changeblock 4, 8, $37 ; right floor
 	endcallback
 
 .WallOpenScript:
@@ -61,14 +61,11 @@ RuinsOfAlphOmanyteChamberPuzzle:
 	setmapscene RUINS_OF_ALPH_INNER_CHAMBER, SCENE_RUINSOFALPHINNERCHAMBER_STRANGE_PRESENCE
 	earthquake 30
 	showemote EMOTE_SHOCK, PLAYER, 15
-	changeblock 2, 2, $18 ; left hole
-	changeblock 4, 2, $19 ; right hole
+	changeblock 2, 8, $2C ; left hole
+	changeblock 4, 8, $2B ; right hole
 	reloadmappart
 	playsound SFX_STRENGTH
 	earthquake 80
-	applymovement PLAYER, RuinsOfAlphOmanyteChamberSkyfallTopMovement
-	playsound SFX_KINESIS
-	waitsfx
 	pause 20
 	warpcheck
 	end
@@ -147,8 +144,8 @@ RuinsOfAlphOmanyteChamber_MapEvents:
 	def_warp_events
 	warp_event  3,  9, RUINS_OF_ALPH_OUTSIDE, 3
 	warp_event  4,  9, RUINS_OF_ALPH_OUTSIDE, 3
-	warp_event  3,  3, RUINS_OF_ALPH_INNER_CHAMBER, 6
-	warp_event  4,  3, RUINS_OF_ALPH_INNER_CHAMBER, 7
+	warp_event  7,  0, RUINS_OF_ALPH_INNER_CHAMBER, 6
+	warp_event  2,  7, RUINS_OF_ALPH_INNER_CHAMBER, 7
 	warp_event  4,  0, RUINS_OF_ALPH_OMANYTE_ITEM_ROOM, 1
 
 	def_coord_events

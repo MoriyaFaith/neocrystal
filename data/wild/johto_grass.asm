@@ -369,57 +369,57 @@ JohtoGrassWildMons:
 	def_grass_wildmons RUINS_OF_ALPH_OUTSIDE
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
-	db 22, NATU
-	db 24, NATU
-	db 22, NATU
-	db 24, NATU
-	db 22, SMEARGLE
-	db 24, SMEARGLE
-	db 24, SMEARGLE
+	db  7, NATU
+	db  9, NATU
+	db  7, NATU
+	db  9, NATU
+	db  7, SMEARGLE
+	db  9, SMEARGLE
+	db  9, SMEARGLE
 	; day
-	db 22, NATU
-	db 24, NATU
-	db 12, NATU
-	db 24, NATU
-	db 22, SMEARGLE
-	db 24, SMEARGLE
-	db 24, SMEARGLE
+	db  7, NATU
+	db  9, NATU
+	db  7, NATU
+	db  9, NATU
+	db  7, SMEARGLE
+	db  9, SMEARGLE
+	db  9, SMEARGLE
 	; nite
-	db 22, NATU
-	db 24, NATU
-	db 22, NATU
-	db 24, NATU
-	db 24, WOOPER
-	db 24, QUAGSIRE
-	db 24, QUAGSIRE
+	db  7, NATU
+	db  9, NATU
+	db  7, NATU
+	db  9, NATU
+	db  9, WOOPER
+	db  9, QUAGSIRE
+	db  9, QUAGSIRE
 	end_grass_wildmons
 
 	def_grass_wildmons RUINS_OF_ALPH_INNER_CHAMBER
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	db 5, UNOWN
-	db 5, UNOWN
-	db 5, UNOWN
-	db 5, UNOWN
-	db 5, UNOWN
-	db 5, UNOWN
-	db 5, UNOWN
+	db 10, UNOWN
+	db 10, UNOWN
+	db 10, UNOWN
+	db 10, UNOWN
+	db 10, UNOWN
+	db 10, ABRA
+	db 10, WOBBUFFET
 	; day
-	db 5, UNOWN
-	db 5, UNOWN
-	db 5, UNOWN
-	db 5, UNOWN
-	db 5, UNOWN
-	db 5, UNOWN
-	db 5, UNOWN
+	db 10, UNOWN
+	db 10, UNOWN
+	db 10, UNOWN
+	db 10, UNOWN
+	db 10, UNOWN
+	db 10, ABRA
+	db 10, WOBBUFFET
 	; nite
-	db 5, UNOWN
-	db 5, UNOWN
-	db 5, UNOWN
-	db 5, UNOWN
-	db 5, UNOWN
-	db 5, UNOWN
-	db 5, UNOWN
+	db 10, UNOWN
+	db 10, UNOWN
+	db 10, UNOWN
+	db 10, UNOWN
+	db 10, UNOWN
+	db 10, GASTLY
+	db 10, WOBBUFFET
 	end_grass_wildmons
 
 	def_grass_wildmons UNION_CAVE_1F

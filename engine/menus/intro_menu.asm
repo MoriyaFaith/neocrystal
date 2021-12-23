@@ -80,7 +80,6 @@ NewGame:
 AreYouABoyOrAreYouAGirl:
 	farcall Mobile_AlwaysReturnNotCarry ; mobile
 	jr c, .ok
-	farcall InitGender
 	ret
 
 .ok
@@ -693,6 +692,9 @@ OakSpeech:
 	ld hl, OakText5
 	call PrintText
 	call RotateThreePalettesRight
+	call ClearTilemap
+
+	farcall InitGender
 	call ClearTilemap
 
 	xor a

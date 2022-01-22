@@ -282,7 +282,7 @@ PokeFanFEdaAfterBattleText:
 Route47_MapEvents:
 	db 0, 0 ; filler
 	def_warp_events
-	warp_event 67, 21, CIANWOOD_CITY, 8
+	warp_event 67, 21, CLIFF_CAVE, 9
 	warp_event 53, 21, CLIFF_CAVE, 1
 	warp_event 52, 17, CLIFF_CAVE, 2
 	warp_event 53, 29, CLIFF_CAVE, 3

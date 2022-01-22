@@ -17,6 +17,8 @@ CliffCave_MapEvents:
 	warp_event  7, 17, CLIFF_CAVE, 7
 	warp_event  3,  3, CLIFF_CAVE, 4
 	warp_event  7, 27, CLIFF_CAVE, 5
+	warp_event 29,  9, CIANWOOD_CITY, 8
+	warp_event 27, 29, ROUTE_47, 1
 
 	def_coord_events
 

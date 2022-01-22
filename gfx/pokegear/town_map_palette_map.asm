@@ -14,16 +14,16 @@ endr
 ENDM
 
 ; gfx/pokegear/town_map.png
-	townmappals EARTH,    EARTH,    EARTH,    MOUNTAIN, MOUNTAIN, MOUNTAIN, BORDER,   BORDER
-	townmappals EARTH,    EARTH,    CITY,     EARTH,    POI,      POI_MTN,  POI,      POI_MTN
-	townmappals EARTH,    EARTH,    EARTH,    MOUNTAIN, MOUNTAIN, MOUNTAIN, BORDER,   BORDER
-	townmappals EARTH,    EARTH,    BORDER,   EARTH,    EARTH,    BORDER,   BORDER,   BORDER
-	townmappals EARTH,    EARTH,    EARTH,    MOUNTAIN, MOUNTAIN, MOUNTAIN, BORDER,   BORDER
-	townmappals BORDER,   BORDER,   BORDER,   BORDER,   BORDER,   BORDER,   BORDER,   BORDER
+	townmappals EARTH,    EARTH,    EARTH,    MOUNTAIN, EARTH,    MOUNTAIN, BORDER,   BORDER
+	townmappals CITY,     CITY,     BORDER,   EARTH,    POI,      POI_MTN,  POI,      POI_MTN
+	townmappals EARTH,    EARTH,    EARTH,    EARTH,    POI_MTN,  EARTH,    BORDER,   BORDER
+	townmappals CITY,     CITY,     CITY,     EARTH,    EARTH,    CITY,     CITY,     CITY
+	townmappals EARTH,    EARTH,    EARTH,    MOUNTAIN, EARTH,    MOUNTAIN, BORDER,   BORDER
+	townmappals BORDER,   BORDER,   BORDER,   BORDER,   POI_MTN,  POI_MTN,  POI_MTN,  POI_MTN
 ; gfx/pokegear/pokegear.png
-	townmappals BORDER,   BORDER,   BORDER,   BORDER,   POI,      POI,      POI,      BORDER
-	townmappals BORDER,   BORDER,   BORDER,   BORDER,   BORDER,   BORDER,   BORDER,   BORDER
-	townmappals CITY,     CITY,     CITY,     CITY,     CITY,     CITY,     CITY,     CITY
-	townmappals CITY,     CITY,     CITY,     CITY,     CITY,     CITY,     CITY,     BORDER
-	townmappals CITY,     CITY,     CITY,     CITY,     CITY,     CITY,     CITY,     CITY
-	townmappals BORDER,   BORDER,   BORDER,   BORDER,   BORDER,   BORDER,   BORDER,   BORDER
+	townmappals CITY,   CITY,   CITY,   CITY,   POI,      POI,      POI,      CITY
+	townmappals CITY,   CITY,   CITY,   CITY,   CITY,   CITY,   CITY,   CITY
+	townmappals BORDER,     BORDER,     BORDER,     BORDER,     BORDER,     BORDER,     BORDER,     BORDER
+	townmappals BORDER,     BORDER,     BORDER,     BORDER,     BORDER,     BORDER,     BORDER,     CITY
+	townmappals BORDER,     BORDER,     BORDER,     BORDER,     BORDER,     BORDER,     BORDER,     BORDER
+	townmappals CITY,   CITY,   CITY,   CITY,   CITY,   CITY,   CITY,   CITY

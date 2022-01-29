@@ -528,9 +528,6 @@ NewBarkTown_Blocks:
 CherrygroveCity_Blocks:
 	INCBIN "maps/CherrygroveCity.ablk"
 
-VioletCity_Blocks:
-	INCBIN "maps/VioletCity.ablk"
-
 AzaleaTown_Blocks:
 	INCBIN "maps/AzaleaTown.ablk"
 
@@ -1058,4 +1055,7 @@ CliffCave_Blocks:
 
 RuinsOfAlphOmanyteChamber_Blocks:
 	INCBIN "maps/RuinsOfAlphOmanyteChamber.ablk"
+
+VioletCity_Blocks:
+	INCBIN "maps/VioletCity.ablk"
 

@@ -135,81 +135,82 @@ MtMortarName:        db "MT.MORTAR@"
 DragonsDenName:      db "DRAGON'S¯DEN@"
 IcePathName:         db "ICE PATH@"
 NotApplicableName:   db "N/A@" ; unreferenced ; "オバケやしき" ("HAUNTED HOUSE") in Japanese
-PalletTownName:      db "PALLET TOWN@"
-ViridianCityName:    db "VIRIDIAN¯CITY@"
-PewterCityName:      db "PEWTER CITY@"
-CeruleanCityName:    db "CERULEAN¯CITY@"
-LavenderTownName:    db "LAVENDER¯TOWN@"
-VermilionCityName:   db "VERMILION¯CITY@"
-CeladonCityName:     db "CELADON¯CITY@"
-SaffronCityName:     db "SAFFRON¯CITY@"
-FuchsiaCityName:     db "FUCHSIA¯CITY@"
-CinnabarIslandName:  db "CINNABAR¯ISLAND@"
-IndigoPlateauName:   db "INDIGO¯PLATEAU@"
-VictoryRoadName:     db "VICTORY¯ROAD@"
-MtMoonName:          db "MT.MOON@"
-RockTunnelName:      db "ROCK TUNNEL@"
-LavRadioTowerName:   db "LAV¯RADIO TOWER@"
+PalletTownName:      db "PALLET TOWN@" ; unreferenced
+ViridianCityName:    db "VIRIDIAN¯CITY@" ; unreferenced
+PewterCityName:      db "PEWTER CITY@" ; unreferenced
+CeruleanCityName:    db "CERULEAN¯CITY@" ; unreferenced
+LavenderTownName:    db "LAVENDER¯TOWN@" ; unreferenced
+VermilionCityName:   db "VERMILION¯CITY@" ; unreferenced
+CeladonCityName:     db "CELADON¯CITY@" ; unreferenced
+SaffronCityName:     db "SAFFRON¯CITY@" ; unreferenced
+FuchsiaCityName:     db "FUCHSIA¯CITY@" ; unreferenced
+CinnabarIslandName:  db "CINNABAR¯ISLAND@" ; unreferenced
+IndigoPlateauName:   db "INDIGO¯PLATEAU@" ; unreferenced
+VictoryRoadName:     db "VICTORY¯ROAD@" ; unreferenced
+MtMoonName:          db "MT.MOON@" ; unreferenced
+RockTunnelName:      db "ROCK TUNNEL@" ; unreferenced
+LavRadioTowerName:   db "LAV¯RADIO TOWER@" ; unreferenced
 SilphCoName:         db "SILPH CO.@" ; unreferenced
 SafariZoneName:      db "SAFARI ZONE@" ; unreferenced
-SeafoamIslandsName:  db "SEAFOAM¯ISLANDS@"
+SeafoamIslandsName:  db "SEAFOAM¯ISLANDS@" ; unreferenced
 PokemonMansionName:  db "#MON¯MANSION@" ; unreferenced
 CeruleanCaveName:    db "CERULEAN¯CAVE@" ; unreferenced
-Route1Name:          db "ROUTE 1@"
-Route2Name:          db "ROUTE 2@"
-Route3Name:          db "ROUTE 3@"
-Route4Name:          db "ROUTE 4@"
-Route5Name:          db "ROUTE 5@"
-Route6Name:          db "ROUTE 6@"
-Route7Name:          db "ROUTE 7@"
-Route8Name:          db "ROUTE 8@"
-Route9Name:          db "ROUTE 9@"
-Route10Name:         db "ROUTE 10@"
-Route11Name:         db "ROUTE 11@"
-Route12Name:         db "ROUTE 12@"
-Route13Name:         db "ROUTE 13@"
-Route14Name:         db "ROUTE 14@"
-Route15Name:         db "ROUTE 15@"
-Route16Name:         db "ROUTE 16@"
-Route17Name:         db "ROUTE 17@"
-Route18Name:         db "ROUTE 18@"
-Route19Name:         db "ROUTE 19@"
-Route20Name:         db "ROUTE 20@"
-Route21Name:         db "ROUTE 21@"
-Route22Name:         db "ROUTE 22@"
-Route23Name:         db "ROUTE 23@"
-Route24Name:         db "ROUTE 24@"
-Route25Name:         db "ROUTE 25@"
-Route26Name:         db "ROUTE 26@"
-Route27Name:         db "ROUTE 27@"
-Route28Name:         db "ROUTE 28@"
-Route29Name:         db "ROUTE 29@"
-Route30Name:         db "ROUTE 30@"
-Route31Name:         db "ROUTE 31@"
-Route32Name:         db "ROUTE 32@"
-Route33Name:         db "ROUTE 33@"
-Route34Name:         db "ROUTE 34@"
-Route35Name:         db "ROUTE 35@"
-Route36Name:         db "ROUTE 36@"
-Route37Name:         db "ROUTE 37@"
-Route38Name:         db "ROUTE 38@"
-Route39Name:         db "ROUTE 39@"
-Route40Name:         db "ROUTE 40@"
-Route41Name:         db "ROUTE 41@"
-Route42Name:         db "ROUTE 42@"
-Route43Name:         db "ROUTE 43@"
-Route44Name:         db "ROUTE 44@"
-Route45Name:         db "ROUTE 45@"
-Route46Name:         db "ROUTE 46@"
-Route47Name:         db "ROUTE 47@"
-Route48Name:         db "ROUTE 48@"
+Route1Name:          db "ROUTE 1@" ; unreferenced
+Route2Name:          db "ROUTE 2@" ; unreferenced
+Route3Name:          db "ROUTE 3@" ; unreferenced
+Route4Name:          db "ROUTE 4@" ; unreferenced
+Route5Name:          db "ROUTE 5@" ; unreferenced
+Route6Name:          db "ROUTE 6@" ; unreferenced
+Route7Name:          db "ROUTE 7@" ; unreferenced
+Route8Name:          db "ROUTE 8@" ; unreferenced
+Route9Name:          db "ROUTE 9@" ; unreferenced
+Route10Name:         db "ROUTE 10@" ; unreferenced
+Route11Name:         db "ROUTE 11@" ; unreferenced
+Route12Name:         db "ROUTE 12@" ; unreferenced
+Route13Name:         db "ROUTE 13@" ; unreferenced
+Route14Name:         db "ROUTE 14@" ; unreferenced
+Route15Name:         db "ROUTE 15@" ; unreferenced
+Route16Name:         db "ROUTE 16@" ; unreferenced
+Route17Name:         db "ROUTE 17@" ; unreferenced
+Route18Name:         db "ROUTE 18@" ; unreferenced
+Route19Name:         db "ROUTE 19@" ; unreferenced
+Route20Name:         db "ROUTE 20@" ; unreferenced
+Route21Name:         db "ROUTE 21@" ; unreferenced
+Route22Name:         db "ROUTE 22@" ; unreferenced
+Route23Name:         db "ROUTE 23@" ; unreferenced
+Route24Name:         db "ROUTE 24@" ; unreferenced
+Route25Name:         db "ROUTE 25@" ; unreferenced
+Route26Name:         db "ROUTE 21@" ; unreferenced
+Route27Name:         db "ROUTE 22@" ; unreferenced
+Route28Name:         db "ROUTE 23@" ; unreferenced
+; All Johto Routes have been renamed
+Route29Name:         db "ROUTE 1@"
+Route30Name:         db "ROUTE 2@"
+Route31Name:         db "ROUTE 3@"
+Route32Name:         db "ROUTE 4@"
+Route33Name:         db "ROUTE 5@"
+Route34Name:         db "ROUTE 6@"
+Route35Name:         db "ROUTE 7@"
+Route36Name:         db "ROUTE 8@"
+Route37Name:         db "ROUTE 9@"
+Route38Name:         db "ROUTE 10@"
+Route39Name:         db "ROUTE 11@"
+Route40Name:         db "ROUTE 12@"
+Route41Name:         db "ROUTE 13@"
+Route42Name:         db "ROUTE 14@"
+Route43Name:         db "ROUTE 15@"
+Route44Name:         db "ROUTE 16@"
+Route45Name:         db "ROUTE 17@"
+Route46Name:         db "ROUTE 18@"
+Route47Name:         db "ROUTE 19@"
+Route48Name:         db "ROUTE 20@"
 DarkCaveName:        db "DARK CAVE@"
 IlexForestName:      db "ILEX¯FOREST@"
 BurnedTowerName:     db "BURNED¯TOWER@"
 FastShipName:        db "FAST SHIP@"
 ViridianForestName:  db "VIRIDIAN¯FOREST@" ; unreferenced
-DiglettsCaveName:    db "DIGLETT'S¯CAVE@"
-TohjoFallsName:      db "TOHJO FALLS@"
+DiglettsCaveName:    db "DIGLETT'S¯CAVE@" ; unreferenced
+TohjoFallsName:      db "TOHJO FALLS@" ; unreferenced
 UndergroundName:     db "UNDERGROUND@"
 BattleTowerName:     db "BATTLE¯TOWER@"
 SpecialMapName:      db "SPECIAL@"

@@ -238,7 +238,7 @@ EvolutionMoves::
 	db NO_MOVE      ; TYROGUE    ; ec
 	db ROLLING_KICK ; HITMONTOP  ; ed
 	db NO_MOVE      ; SMOOCHUM   ; ee
-	db NO_MOVE      ; ELEKID     ; ef
+	db NO_MOVE      ; WEAVILE    ; ef
 	db NO_MOVE      ; MAGBY      ; f0
 	db NO_MOVE      ; MILTANK    ; f1
 	db NO_MOVE      ; BLISSEY    ; f2

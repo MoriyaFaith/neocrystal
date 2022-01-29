@@ -2908,6 +2908,7 @@ HeracrossEvosAttacks:
 	db 0 ; no more level-up moves
 
 SneaselEvosAttacks:
+	db EVOLVE_HAPPINESS, TR_NITE, WEAVILE
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 1, LEER
@@ -3209,17 +3210,18 @@ SmoochumEvosAttacks:
 	db 49, BLIZZARD
 	db 0 ; no more level-up moves
 
-ElekidEvosAttacks:
-	db EVOLVE_LEVEL, 30, ELECTABUZZ
+WeavileEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, QUICK_ATTACK
+	db 1, SCRATCH
 	db 1, LEER
-	db 9, THUNDERPUNCH
-	db 17, LIGHT_SCREEN
-	db 25, SWIFT
-	db 33, SCREECH
-	db 41, THUNDERBOLT
-	db 49, THUNDER
+	db 9, QUICK_ATTACK
+	db 17, SCREECH
+	db 25, FAINT_ATTACK
+	db 33, FURY_SWIPES
+	db 41, AGILITY
+	db 49, SLASH
+	db 57, BEAT_UP
+	db 65, METAL_CLAW
 	db 0 ; no more level-up moves
 
 MagbyEvosAttacks:

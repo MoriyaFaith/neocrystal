@@ -237,7 +237,7 @@ BitmasksPointers:
 	dw TyrogueBitmasks
 	dw HitmontopBitmasks
 	dw SmoochumBitmasks
-	dw ElekidBitmasks
+	dw WeavileBitmasks
 	dw MagbyBitmasks
 	dw MiltankBitmasks
 	dw BlisseyBitmasks

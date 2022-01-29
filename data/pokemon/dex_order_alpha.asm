@@ -54,7 +54,6 @@ AlphabeticalPokedexOrder:
 	db EKANS
 	db ELECTABUZZ
 	db ELECTRODE
-	db ELEKID
 	db ENTEI
 	db ESPEON
 	db EXEGGCUTE
@@ -243,6 +242,7 @@ AlphabeticalPokedexOrder:
 	db VOLTORB
 	db VULPIX
 	db WARTORTLE
+	db WEAVILE
 	db WEEDLE
 	db WEEPINBELL
 	db WEEZING

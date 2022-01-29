@@ -12,19 +12,19 @@ prob_total = 0
 ; Pichu
 	prob 11
 	prob 3
-; Cleffa
+; CLEFAIRY
 	prob 12
 	prob 3
-; Igglybuff
+; JIGGLYPUFF
 	prob 12
 	prob 3
-; Smoochum
+; JYNX
 	prob 11
 	prob 3
-; Magby
+; MAGMAR
 	prob 11
 	prob 3
-; Elekid
+; ELECTABUZZ
 	prob 11
 	prob 3
 ; Tyrogue
@@ -88,7 +88,7 @@ OddEggs:
 	bigdw 9 ; SDef
 	db "EGG@@@@@@@@"
 
-	db CLEFFA
+	db CLEFAIRY
 	db NO_ITEM
 	db POUND, CHARM, DIZZY_PUNCH, 0
 	dw 04096 ; OT ID
@@ -114,7 +114,7 @@ OddEggs:
 	bigdw 10 ; SDef
 	db "EGG@@@@@@@@"
 
-	db CLEFFA
+	db CLEFAIRY
 	db NO_ITEM
 	db POUND, CHARM, DIZZY_PUNCH, 0
 	dw 00768 ; OT ID
@@ -140,7 +140,7 @@ OddEggs:
 	bigdw 11 ; SDef
 	db "EGG@@@@@@@@"
 
-	db IGGLYBUFF
+	db JIGGLYPUFF
 	db NO_ITEM
 	db SING, CHARM, DIZZY_PUNCH, 0
 	dw 04096 ; OT ID
@@ -166,7 +166,7 @@ OddEggs:
 	bigdw 7 ; SDef
 	db "EGG@@@@@@@@"
 
-	db IGGLYBUFF
+	db JIGGLYPUFF
 	db NO_ITEM
 	db SING, CHARM, DIZZY_PUNCH, 0
 	dw 00768 ; OT ID
@@ -192,7 +192,7 @@ OddEggs:
 	bigdw 8 ; SDef
 	db "EGG@@@@@@@@"
 
-	db SMOOCHUM
+	db JYNX
 	db NO_ITEM
 	db POUND, LICK, DIZZY_PUNCH, 0
 	dw 03584 ; OT ID
@@ -218,7 +218,7 @@ OddEggs:
 	bigdw 11 ; SDef
 	db "EGG@@@@@@@@"
 
-	db SMOOCHUM
+	db JYNX
 	db NO_ITEM
 	db POUND, LICK, DIZZY_PUNCH, 0
 	dw 00512 ; OT ID
@@ -244,7 +244,7 @@ OddEggs:
 	bigdw 12 ; SDef
 	db "EGG@@@@@@@@"
 
-	db MAGBY
+	db MAGMAR
 	db NO_ITEM
 	db EMBER, DIZZY_PUNCH, 0, 0
 	dw 02560 ; OT ID
@@ -270,7 +270,7 @@ OddEggs:
 	bigdw 10 ; SDef
 	db "EGG@@@@@@@@"
 
-	db MAGBY
+	db MAGMAR
 	db NO_ITEM
 	db EMBER, DIZZY_PUNCH, 0, 0
 	dw 00512 ; OT ID
@@ -296,7 +296,7 @@ OddEggs:
 	bigdw 11 ; SDef
 	db "EGG@@@@@@@@"
 
-	db ELEKID
+	db ELECTABUZZ
 	db NO_ITEM
 	db QUICK_ATTACK, LEER, DIZZY_PUNCH, 0
 	dw 03072 ; OT ID
@@ -322,7 +322,7 @@ OddEggs:
 	bigdw 10 ; SDef
 	db "EGG@@@@@@@@"
 
-	db ELEKID
+	db ELECTABUZZ
 	db NO_ITEM
 	db QUICK_ATTACK, LEER, DIZZY_PUNCH, 0
 	dw 00512 ; OT ID

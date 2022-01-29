@@ -244,8 +244,8 @@ PokemonCries::
 	mon_cry CRY_AIPOM,        44,  264 ; TYROGUE
 	mon_cry CRY_SLUGMA,        0,  256 ; HITMONTOP
 	mon_cry CRY_MARILL,      104,  256 ; SMOOCHUM
-	mon_cry CRY_SUNFLORA,   -728,  180 ; ELEKID
-	mon_cry CRY_TEDDIURSA,   374,   58 ; MAGBY
+	mon_cry CRY_WOOPER,      113,  300 ; WEAVILE
+	mon_cry CRY_GLIGAR,     -258,  256 ; GLISCOR
 	mon_cry CRY_GLIGAR,     -461,  416 ; MILTANK
 	mon_cry CRY_SLOWKING,    659,  320 ; BLISSEY
 	mon_cry CRY_RAIKOU,      558,  288 ; RAIKOU

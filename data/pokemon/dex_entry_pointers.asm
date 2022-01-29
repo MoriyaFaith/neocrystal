@@ -239,7 +239,7 @@ PokedexDataPointerTable:
 	dw TyroguePokedexEntry
 	dw HitmontopPokedexEntry
 	dw SmoochumPokedexEntry
-	dw ElekidPokedexEntry
+	dw WeavilePokedexEntry
 	dw MagbyPokedexEntry
 	dw MiltankPokedexEntry
 	dw BlisseyPokedexEntry

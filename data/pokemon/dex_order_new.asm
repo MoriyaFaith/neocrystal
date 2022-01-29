@@ -156,13 +156,8 @@ NewPokedexOrder:
 	db GIRAFARIG
 	db TAUROS
 	db MILTANK
-	db MAGBY
-	db MAGMAR
 	db SMOOCHUM
 	db JYNX
-	db ELEKID
-	db ELECTABUZZ
-	db MR__MIME
 	db SMEARGLE
 	db FARFETCH_D
 	db NATU
@@ -198,6 +193,7 @@ NewPokedexOrder:
 	db GLIGAR
 	db DELIBIRD
 	db SNEASEL
+	db WEAVILE
 	db SWINUB
 	db PILOSWINE
 	db TEDDIURSA

@@ -240,7 +240,7 @@ IconPointers:
 	dw TyrogueIcon
 	dw HitmontopIcon
 	dw SmoochumIcon
-	dw ElekidIcon
+	dw WeavileIcon
 	dw MagbyIcon
 	dw MiltankIcon
 	dw BlisseyIcon

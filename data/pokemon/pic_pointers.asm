@@ -482,8 +482,8 @@ PokemonPicPointers::
 	dba HitmontopBackpic
 	dba SmoochumFrontpic
 	dba SmoochumBackpic
-	dba ElekidFrontpic
-	dba ElekidBackpic
+	dba WeavileFrontpic
+	dba WeavileBackpic
 	dba MagbyFrontpic
 	dba MagbyBackpic
 	dba MiltankFrontpic

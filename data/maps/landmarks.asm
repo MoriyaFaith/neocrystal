@@ -9,29 +9,29 @@ Landmarks:
 	table_width 4, Landmarks
 	dbbw       0,   0, SpecialMapName
 	landmark 140, 100, NewBarkTownName
-	landmark 128, 100, Route29Name
-	landmark 100, 100, CherrygroveCityName
-	landmark 100,  80, Route30Name
-	landmark  96,  60, Route31Name
-	landmark  84,  60, VioletCityName
-	landmark  85,  58, SproutTowerName
-	landmark  84,  92, Route32Name
-	landmark  76,  76, RuinsOfAlphName
+	landmark 124, 100, Route29Name
+	landmark 108, 100, CherrygroveCityName
+	landmark 108,  88, Route30Name
+	landmark 104,  76, Route31Name
+	landmark  92,  76, VioletCityName
+	landmark  94,  74, SproutTowerName
+	landmark  88, 100, Route32Name
 	landmark  84, 124, UnionCaveName
-	landmark  82, 124, Route33Name
+	landmark  76, 112, RuinsOfAlphName
+	landmark  76, 124, Route33Name
 	landmark  68, 124, AzaleaTownName
 	landmark  70, 122, SlowpokeWellName
-	landmark  52, 120, IlexForestName
-	landmark  52, 112, Route34Name
-	landmark  52,  92, GoldenrodCityName
-	landmark  50,  92, RadioTowerName
-	landmark  52,  76, Route35Name
-	landmark  52,  60, NationalParkName
-	landmark  64,  60, Route36Name
-	landmark  68,  52, Route37Name
-	landmark  68,  44, EcruteakCityName
-	landmark  70,  42, TinTowerName
-	landmark  66,  42, BurnedTowerName
+	landmark  60, 120, IlexForestName
+	landmark  60, 112, Route34Name
+	landmark  60, 100, GoldenrodCityName
+	landmark  58, 100, RadioTowerName
+	landmark  60,  88, Route35Name
+	landmark  60,  76, NationalParkName
+	landmark  76,  76, Route36Name
+	landmark  76,  68, Route37Name
+	landmark  76,  60, EcruteakCityName
+	landmark  78,  58, TinTowerName
+	landmark  74,  58, BurnedTowerName
 	landmark  52,  44, Route38Name
 	landmark  36,  48, Route39Name
 	landmark  36,  60, OlivineCityName
@@ -41,9 +41,6 @@ Landmarks:
 	landmark  28,  92, WhirlIslandsName
 	landmark  28, 100, Route41Name
 	landmark  20, 100, CianwoodCityName
-	landmark  12, 100, Route47Name
-	landmark  12, 100, CliffCaveName
-	landmark  12,  92, Route48Name
 	landmark  92,  44, Route42Name
 	landmark  84,  44, MtMortarName
 	landmark 108,  44, MahoganyTownName
@@ -56,6 +53,9 @@ Landmarks:
 	landmark 132,  64, Route45Name
 	landmark 112,  72, DarkCaveName
 	landmark 124,  88, Route46Name
+	landmark  12, 100, Route47Name
+	landmark  12, 100, CliffCaveName
+	landmark  12,  92, Route48Name
 	landmark 148,  68, SilverCaveName
 	assert_table_length KANTO_LANDMARK
 	landmark  52, 108, PalletTownName
@@ -184,26 +184,26 @@ Route26Name:         db "ROUTE 21@" ; unreferenced
 Route27Name:         db "ROUTE 22@" ; unreferenced
 Route28Name:         db "ROUTE 23@" ; unreferenced
 ; All Johto Routes have been renamed
-Route29Name:         db "ROUTE 1@"
-Route30Name:         db "ROUTE 2@"
-Route31Name:         db "ROUTE 3@"
-Route32Name:         db "ROUTE 4@"
-Route33Name:         db "ROUTE 5@"
-Route34Name:         db "ROUTE 6@"
-Route35Name:         db "ROUTE 7@"
-Route36Name:         db "ROUTE 8@"
-Route37Name:         db "ROUTE 9@"
-Route38Name:         db "ROUTE 10@"
-Route39Name:         db "ROUTE 11@"
-Route40Name:         db "ROUTE 12@"
-Route41Name:         db "ROUTE 13@"
-Route42Name:         db "ROUTE 14@"
-Route43Name:         db "ROUTE 15@"
-Route44Name:         db "ROUTE 16@"
-Route45Name:         db "ROUTE 17@"
-Route46Name:         db "ROUTE 18@"
-Route47Name:         db "ROUTE 19@"
-Route48Name:         db "ROUTE 20@"
+Route29Name:         db "JOHTO¯ROUTE 1@"
+Route30Name:         db "JOHTO¯ROUTE 2@"
+Route31Name:         db "JOHTO¯ROUTE 3@"
+Route32Name:         db "JOHTO¯ROUTE 4@"
+Route33Name:         db "JOHTO¯ROUTE 5@"
+Route34Name:         db "JOHTO¯ROUTE 6@"
+Route35Name:         db "JOHTO¯ROUTE 7@"
+Route36Name:         db "JOHTO¯ROUTE 8@"
+Route37Name:         db "JOHTO¯ROUTE 9@"
+Route38Name:         db "JOHTO¯ROUTE 10@"
+Route39Name:         db "JOHTO¯ROUTE 11@"
+Route40Name:         db "JOHTO¯ROUTE 12@"
+Route41Name:         db "JOHTO¯ROUTE 13@"
+Route42Name:         db "JOHTO¯ROUTE 14@"
+Route43Name:         db "JOHTO¯ROUTE 15@"
+Route44Name:         db "JOHTO¯ROUTE 16@"
+Route45Name:         db "JOHTO¯ROUTE 17@"
+Route46Name:         db "JOHTO¯ROUTE 18@"
+Route47Name:         db "JOHTO¯ROUTE 19@"
+Route48Name:         db "JOHTO¯ROUTE 20@"
 DarkCaveName:        db "DARK CAVE@"
 IlexForestName:      db "ILEX¯FOREST@"
 BurnedTowerName:     db "BURNED¯TOWER@"

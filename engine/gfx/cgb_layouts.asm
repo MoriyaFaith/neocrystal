@@ -218,7 +218,7 @@ _CGB_StatsScreenHPPals:
 	call WipeAttrmap
 
 	hlcoord 0, 0, wAttrmap
-	lb bc, 8, SCREEN_WIDTH
+	lb bc, SCREEN_HEIGHT, 9
 	ld a, $1 ; mon palette
 	call FillBoxCGB
 
@@ -227,17 +227,17 @@ _CGB_StatsScreenHPPals:
 	ld a, $2 ; exp palette
 	call ByteFill
 
-	hlcoord 13, 5, wAttrmap
+	hlcoord 1, 15, wAttrmap
 	lb bc, 2, 2
 	ld a, $3 ; pink page palette
 	call FillBoxCGB
 
-	hlcoord 15, 5, wAttrmap
+	hlcoord 3, 15, wAttrmap
 	lb bc, 2, 2
 	ld a, $4 ; green page palette
 	call FillBoxCGB
 
-	hlcoord 17, 5, wAttrmap
+	hlcoord 5, 15, wAttrmap
 	lb bc, 2, 2
 	ld a, $5 ; blue page palette
 	call FillBoxCGB

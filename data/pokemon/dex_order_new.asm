@@ -40,10 +40,8 @@ NewPokedexOrder:
 	db ZUBAT
 	db GOLBAT
 	db CROBAT
-	db CLEFFA
 	db CLEFAIRY
 	db CLEFABLE
-	db IGGLYBUFF
 	db JIGGLYPUFF
 	db WIGGLYTUFF
 	db TOGEPI
@@ -84,6 +82,7 @@ NewPokedexOrder:
 	db SLOWBRO
 	db SLOWKING
 	db MURKROW
+	db HONCHKROW
 	db ODDISH
 	db GLOOM
 	db VILEPLUME
@@ -153,6 +152,7 @@ NewPokedexOrder:
 	db HITMONCHAN
 	db HITMONTOP
 	db MISDREAVUS
+	db MISMAGIUS
 	db GIRAFARIG
 	db TAUROS
 	db MILTANK
@@ -191,6 +191,7 @@ NewPokedexOrder:
 	db SEADRA
 	db KINGDRA
 	db GLIGAR
+	db GLISCOR
 	db DELIBIRD
 	db SNEASEL
 	db WEAVILE

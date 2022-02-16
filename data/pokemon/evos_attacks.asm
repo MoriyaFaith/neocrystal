@@ -2379,24 +2379,27 @@ PichuEvosAttacks:
 	db 11, SWEET_KISS
 	db 0 ; no more level-up moves
 
-CleffaEvosAttacks:
-	db EVOLVE_HAPPINESS, TR_ANYTIME, CLEFAIRY
+HonchkrowEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, POUND
-	db 1, CHARM
-	db 4, ENCORE
-	db 8, SING
-	db 13, SWEET_KISS
+	db 1, PECK
+	db 11, PURSUIT
+	db 16, HAZE
+	db 26, NIGHT_SHADE
+	db 31, FAINT_ATTACK
+	db 36, RAZOR_WIND
+	db 41, MEAN_LOOK
 	db 0 ; no more level-up moves
 
-IgglybuffEvosAttacks:
-	db EVOLVE_HAPPINESS, TR_ANYTIME, JIGGLYPUFF
+MismagiusEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, SING
-	db 1, CHARM
-	db 4, DEFENSE_CURL
-	db 9, POUND
-	db 14, SWEET_KISS
+	db 1, GROWL
+	db 1, PSYWAVE
+	db 6, SPITE
+	db 12, CONFUSE_RAY
+	db 19, MEAN_LOOK
+	db 27, PSYBEAM
+	db 36, PAIN_SPLIT
+	db 46, PERISH_SONG
 	db 0 ; no more level-up moves
 
 TogepiEvosAttacks:
@@ -2697,6 +2700,7 @@ UmbreonEvosAttacks:
 	db 0 ; no more level-up moves
 
 MurkrowEvosAttacks:
+	db EVOLVE_ITEM, MOON_STONE, HONCHKROW
 	db 0 ; no more evolutions
 	db 1, PECK
 	db 11, PURSUIT
@@ -2721,6 +2725,7 @@ SlowkingEvosAttacks:
 	db 0 ; no more level-up moves
 
 MisdreavusEvosAttacks:
+	db EVOLVE_ITEM, MOON_STONE, MISMAGIUS
 	db 0 ; no more evolutions
 	db 1, GROWL
 	db 1, PSYWAVE
@@ -2799,6 +2804,7 @@ DunsparceEvosAttacks:
 	db 0 ; no more level-up moves
 
 GligarEvosAttacks:
+	db EVOLVE_HAPPINESS, TR_NITE, GLISCOR
 	db 0 ; no more evolutions
 	db 1, POISON_STING
 	db 6, SAND_ATTACK
@@ -3224,18 +3230,17 @@ WeavileEvosAttacks:
 	db 65, METAL_CLAW
 	db 0 ; no more level-up moves
 
-MagbyEvosAttacks:
-	db EVOLVE_LEVEL, 30, MAGMAR
+GliscorEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, EMBER
-	db 7, LEER
-	db 13, SMOG
-	db 19, FIRE_PUNCH
-	db 25, SMOKESCREEN
-	db 31, SUNNY_DAY
-	db 37, FLAMETHROWER
-	db 43, CONFUSE_RAY
-	db 49, FIRE_BLAST
+	db 1, POISON_STING
+	db 6, SAND_ATTACK
+	db 13, HARDEN
+	db 20, QUICK_ATTACK
+	db 28, FAINT_ATTACK
+	db 36, SLASH
+	db 40, RAZOR_WIND
+	db 44, SCREECH
+	db 52, GUILLOTINE
 	db 0 ; no more level-up moves
 
 MiltankEvosAttacks:

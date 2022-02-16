@@ -174,8 +174,8 @@ EvosAttacksPointers::
 	dw ChinchouEvosAttacks
 	dw LanturnEvosAttacks
 	dw PichuEvosAttacks
-	dw CleffaEvosAttacks
-	dw IgglybuffEvosAttacks
+	dw HonchkrowEvosAttacks
+	dw MismagiusEvosAttacks
 	dw TogepiEvosAttacks
 	dw TogeticEvosAttacks
 	dw NatuEvosAttacks
@@ -241,7 +241,7 @@ EvosAttacksPointers::
 	dw HitmontopEvosAttacks
 	dw SmoochumEvosAttacks
 	dw WeavileEvosAttacks
-	dw MagbyEvosAttacks
+	dw GliscorEvosAttacks
 	dw MiltankEvosAttacks
 	dw BlisseyEvosAttacks
 	dw RaikouEvosAttacks

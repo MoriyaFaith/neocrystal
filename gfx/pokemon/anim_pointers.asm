@@ -171,8 +171,8 @@ AnimationPointers:
 	dw ChinchouAnimation
 	dw LanturnAnimation
 	dw PichuAnimation
-	dw CleffaAnimation
-	dw IgglybuffAnimation
+	dw HonchkrowAnimation
+	dw MismagiusAnimation
 	dw TogepiAnimation
 	dw TogeticAnimation
 	dw NatuAnimation
@@ -238,7 +238,7 @@ AnimationPointers:
 	dw HitmontopAnimation
 	dw SmoochumAnimation
 	dw WeavileAnimation
-	dw MagbyAnimation
+	dw GliscorAnimation
 	dw MiltankAnimation
 	dw BlisseyAnimation
 	dw RaikouAnimation

@@ -347,10 +347,10 @@ PokemonPicPointers::
 	dba LanturnBackpic
 	dba PichuFrontpic
 	dba PichuBackpic
-	dba CleffaFrontpic
-	dba CleffaBackpic
-	dba IgglybuffFrontpic
-	dba IgglybuffBackpic
+	dba HonchkrowFrontpic
+	dba HonchkrowBackpic
+	dba MismagiusFrontpic
+	dba MismagiusBackpic
 	dba TogepiFrontpic
 	dba TogepiBackpic
 	dba TogeticFrontpic
@@ -484,8 +484,8 @@ PokemonPicPointers::
 	dba SmoochumBackpic
 	dba WeavileFrontpic
 	dba WeavileBackpic
-	dba MagbyFrontpic
-	dba MagbyBackpic
+	dba GliscorFrontpic
+	dba GliscorBackpic
 	dba MiltankFrontpic
 	dba MiltankBackpic
 	dba BlisseyFrontpic

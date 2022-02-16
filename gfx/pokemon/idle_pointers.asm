@@ -171,8 +171,8 @@ AnimationIdlePointers:
 	dw ChinchouAnimationIdle
 	dw LanturnAnimationIdle
 	dw PichuAnimationIdle
-	dw CleffaAnimationIdle
-	dw IgglybuffAnimationIdle
+	dw HonchkrowAnimationIdle
+	dw MismagiusAnimationIdle
 	dw TogepiAnimationIdle
 	dw TogeticAnimationIdle
 	dw NatuAnimationIdle
@@ -238,7 +238,7 @@ AnimationIdlePointers:
 	dw HitmontopAnimationIdle
 	dw SmoochumAnimationIdle
 	dw WeavileAnimationIdle
-	dw MagbyAnimationIdle
+	dw GliscorAnimationIdle
 	dw MiltankAnimationIdle
 	dw BlisseyAnimationIdle
 	dw RaikouAnimationIdle

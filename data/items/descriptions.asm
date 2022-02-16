@@ -355,7 +355,8 @@ WaterStoneDesc:
 	next "kinds of #MON.@"
 
 TeruSama2Desc:
-	db   "?@"
+	db   "Prevents poison."
+	next "(HOLD)@"
 
 HPUpDesc:
 	db   "Raises the HP of"
@@ -434,7 +435,8 @@ DireHitDesc:
 	next "ratio. (1 BTL)@"
 
 TeruSama3Desc:
-	db   "?@"
+	db   "Prevents burn."
+	next "(HOLD)@"
 
 FreshWaterDesc:
 	db   "Restores #MON"
@@ -453,7 +455,8 @@ XAttackDesc:
 	next "(1 BTL)@"
 
 TeruSama4Desc:
-	db   "?@"
+	db   "Prevents freeze."
+	next "(HOLD)@"
 
 XDefendDesc:
 	db   "Raises DEFENSE."
@@ -609,7 +612,8 @@ BluApricornDesc:
 	db   "A blue APRICORN.@"
 
 TeruSama6Desc:
-	db   "?@"
+	db   "Prevents"
+	next "paralysis. (HOLD)@"
 
 AmuletCoinDesc:
 	db   "Doubles monetary"
@@ -645,7 +649,8 @@ BlkApricornDesc:
 	next "@"
 
 TeruSama7Desc:
-	db   "?@"
+	db   "Prevents sleep."
+	next "(HOLD)@"
 
 PnkApricornDesc:
 	db   "A pink APRICORN."
@@ -724,7 +729,8 @@ FocusBandDesc:
 	next "ing. (HOLD)@"
 
 TeruSama8Desc:
-	db   "?@"
+	db   "Prevents"
+	next "confusion. (HOLD)@"
 
 EnergyPowderDesc:
 	db   "Restores #MON"
@@ -782,13 +788,16 @@ PassDesc:
 	next "MAGNET TRAIN.@"
 
 TeruSama9Desc:
-	db   "?@"
+	db   "Raises ATTACK"
+	next "when hit. (1 BTL)@"
 
 TeruSama10Desc:
-	db   "?@"
+	db   "Raises DEFENSE"
+	next "when hit. (1 BTL)@"
 
 TeruSama11Desc:
-	db   "?@"
+	db   "Raises SPEED"
+	next "when hit. (1 BTL)@"
 
 CharcoalDesc:
 	db   "Powers up fire-"
@@ -803,10 +812,12 @@ ScopeLensDesc:
 	next "hit ratio. (HOLD)@"
 
 TeruSama12Desc:
-	db   "?@"
+	db   "Raises SP. ATK"
+	next "when hit. (1 BTL)@"
 
 TeruSama13Desc:
-	db   "?@"
+	db   "Raises SP. DEF"
+	next "when hit. (1 BTL)@"
 
 MetalCoatDesc:
 	db   "Powers up steel-"
@@ -817,14 +828,16 @@ DragonFangDesc:
 	next "type moves. (HOLD)@"
 
 TeruSama14Desc:
-	db   "?@"
+	db   "Raises ACCURACY"
+	next "when hit. (1 BTL)@"
 
 LeftoversDesc:
 	db   "Restores HP during"
 	next "battle. (HOLD)@"
 
 TeruSama15Desc:
-	db   "?@"
+	db   "Raises EVASION"
+	next "when hit. (1 BTL)@"
 
 TeruSama16Desc:
 	db   "?@"

@@ -418,39 +418,35 @@ StatsScreen_InitUpperHalf:
 	ld a, [wBaseDexNo]
 	ld [wTextDecimalByte], a
 	ld [wCurSpecies], a
-	hlcoord 2, 0
+	hlcoord 8, 0
 	ld [hl], "№"
 	inc hl
 	ld [hl], "."
 	inc hl
-	hlcoord 4, 0
+	hlcoord 10, 0
 	lb bc, PRINTNUM_LEADINGZEROS | 1, 3
 	ld de, wTextDecimalByte
 	call PrintNum
-	hlcoord 3, 8
+	hlcoord 14, 0
 	call PrintLevel
 	ld hl, .NicknamePointers
 	call GetNicknamenamePointer
 	call CopyNickname
-	hlcoord 0, 10
+	hlcoord 8, 2
 	call PlaceString
-	hlcoord 8, 8
+	hlcoord 18, 0
 	call .PlaceGenderChar
-	hlcoord 0, 13
+	hlcoord 9, 4
+	ld a, "/"
+	ld [hli], a
 	ld a, [wBaseDexNo]
 	ld [wNamedObjectIndex], a
 	call GetPokemonName
 	call PlaceString
-	ld de, .SpeciesStr
-	hlcoord 0, 12
-	call PlaceString
-	call StatsScreen_PlaceVerticalDivider
+	call StatsScreen_PlaceHorizontalDivider
 	call StatsScreen_PlacePageSwitchArrows
 	call StatsScreen_PlaceShinyIcon
 	ret
-
-.SpeciesStr:
-	db "NAME/@"
 
 .PlaceHPBar:
 	ld hl, wTempMonHP
@@ -487,8 +483,9 @@ StatsScreen_InitUpperHalf:
 	dw sBoxMonNicknames
 	dw wBufferMonNickname
 
-StatsScreen_PlaceVerticalDivider:
-	hlcoord 9, 0
+StatsScreen_PlaceVerticalDivider: ; unreferenced
+; The Japanese stats screen has a vertical divider.
+	hlcoord 7, 0
 	ld bc, SCREEN_WIDTH
 	ld d, SCREEN_HEIGHT
 .loop
@@ -499,7 +496,7 @@ StatsScreen_PlaceVerticalDivider:
 	jr nz, .loop
 	ret
 
-StatsScreen_PlaceHorizontalDivider: ; unreferenced
+StatsScreen_PlaceHorizontalDivider:
 	hlcoord 0, 7
 	ld b, SCREEN_WIDTH
 	ld a, $62 ; horizontal divider (empty HP/exp bar)
@@ -510,9 +507,9 @@ StatsScreen_PlaceHorizontalDivider: ; unreferenced
 	ret
 
 StatsScreen_PlacePageSwitchArrows:
-	hlcoord 0, 16
+	hlcoord 12, 6
 	ld [hl], "◀"
-	hlcoord 7, 16
+	hlcoord 19, 6
 	ld [hl], "▶"
 	ret
 
@@ -548,8 +545,8 @@ StatsScreen_LoadGFX:
 	maskbits NUM_STAT_PAGES
 	ld c, a
 	call StatsScreen_LoadPageIndicators
-	hlcoord 10, 0
-	lb bc, 20, 10
+	hlcoord 0, 8
+	lb bc, 10, 20
 	call ClearBox
 	ret
 
@@ -578,13 +575,13 @@ StatsScreen_LoadGFX:
 	dw LoadBluePage
 
 LoadPinkPage:
-	hlcoord 10, 1
+	hlcoord 0, 9
 	ld b, $0
 	predef DrawPlayerHP
-	hlcoord 18, 1
+	hlcoord 8, 9
 	ld [hl], $41 ; right HP/exp bar end cap
 	ld de, .Status_Type
-	hlcoord 10, 4
+	hlcoord 0, 12
 	call PlaceString
 	ld a, [wTempMonPokerusStatus]
 	ld b, a
@@ -593,13 +590,13 @@ LoadPinkPage:
 	ld a, b
 	and $f0
 	jr z, .NotImmuneToPkrs
-	hlcoord 10, 8
+	hlcoord 8, 8
 	ld [hl], "." ; Pokérus immunity dot
 .NotImmuneToPkrs:
 	ld a, [wMonType]
 	cp BOXMON
 	jr z, .StatusOK
-	hlcoord 16, 5
+	hlcoord 6, 13
 	push hl
 	ld de, wTempMonStatus
 	predef PlaceStatusString
@@ -608,18 +605,18 @@ LoadPinkPage:
 	jr .StatusOK
 .HasPokerus:
 	ld de, .PkrsStr
-	hlcoord 11, 5
+	hlcoord 1, 13
 	call PlaceString
 	jr .done_status
 .StatusOK:
 	ld de, .OK_str
 	call PlaceString
 .done_status
-	hlcoord 11, 7
+	hlcoord 1, 15
 	predef PrintMonTypes
-	hlcoord 9, 1
+	hlcoord 9, 8
 	ld de, SCREEN_WIDTH
-	ld b, 20
+	ld b, 10
 	ld a, $31 ; vertical divider
 .vertical_divider
 	ld [hl], a
@@ -627,11 +624,11 @@ LoadPinkPage:
 	dec b
 	jr nz, .vertical_divider
 	ld de, .ExpPointStr
-	hlcoord 10, 10
+	hlcoord 10, 9
 	call PlaceString
-	hlcoord 17, 15
+	hlcoord 17, 14
 	call .PrintNextLevel
-	hlcoord 13, 11
+	hlcoord 13, 10
 	lb bc, 3, 7
 	ld de, wTempMonExp
 	call PrintNum
@@ -721,18 +718,26 @@ LoadPinkPage:
 
 LoadGreenPage:
 	ld de, .Item
-	hlcoord 10, 2
+	hlcoord 0, 8
 	call PlaceString
 	call .GetItemName
-	hlcoord 11, 4
+	hlcoord 8, 8
+	call PlaceString
+	ld de, .Move
+	hlcoord 0, 10
 	call PlaceString
 	ld hl, wTempMonMoves
 	ld de, wListMoves_MoveIndicesBuffer
 	ld bc, NUM_MOVES
 	call CopyBytes
-	hlcoord 10, 7
-	ld bc, 6
-	predef PrintTempMonStats
+	hlcoord 8, 10
+	ld a, SCREEN_WIDTH * 2
+	ld [wListMovesLineSpacing], a
+	predef ListMoves
+	hlcoord 12, 11
+	ld a, SCREEN_WIDTH * 2
+	ld [wListMovesLineSpacing], a
+	predef ListMovePP
 	ret
 
 .GetItemName:
@@ -751,107 +756,35 @@ LoadGreenPage:
 	db "ITEM@"
 
 .ThreeDashes:
-	db "NONE@"
+	db "---@"
 
-.Move: ;unreferenced
-	db "MOVES@"
+.Move:
+	db "MOVE@"
 
 LoadBluePage:
 	call .PlaceOTInfo
-	hlcoord 9, 0
+	hlcoord 10, 8
 	ld de, SCREEN_WIDTH
-	ld b, 20
+	ld b, 10
 	ld a, $31 ; vertical divider
 .vertical_divider
 	ld [hl], a
 	add hl, de
 	dec b
 	jr nz, .vertical_divider
-	call .placeCaughtLocation
-	ld de, MetAtMapString
-	hlcoord 10, 9
-	call PlaceString
-	call .placeCaughtLevel
-	ret
-
-.placeCaughtLocation
-	ld a, [wTempMonCaughtLocation]
-	and CAUGHT_LOCATION_MASK
-	jr z, .unknown_location
-	cp LANDMARK_EVENT
-	jr z, .unknown_location
-	cp LANDMARK_GIFT
-	jr z, .unknown_location
-	ld e, a
-	farcall GetLandmarkName
-	farcall Summary_ConvertLineBreakCharacters
-	ld de, wStringBuffer1
-	hlcoord 11, 10
-	call PlaceString
-	ld a, [wTempMonCaughtTime]
-	and CAUGHT_TIME_MASK
-	ret z ; no time
-	rlca
-	rlca
-	dec a
-	ld hl, .times
-	call GetNthString
-	ld d, h
-	ld e, l
-	call CopyName1
-	ld de, wStringBuffer2
-	hlcoord 10, 12
-	call PlaceString
-	ret
-
-.unknown_location:
-	ld de, MetUnknownMapString
-	hlcoord 11, 10
-	call PlaceString
-	ret
-
-.times
-	db "MORNING@"
-	db "DAY@"
-	db "NIGHT@"
-
-.placeCaughtLevel
-	; caught level
-	; Limited to between 1 and 63 since it's a 6-bit quantity.
-	ld a, [wTempMonCaughtLevel]
-	and CAUGHT_LEVEL_MASK
-	jr z, .unknown_level
-	cp CAUGHT_EGG_LEVEL ; egg marker value
-	jr nz, .print
-	ld a, EGG_LEVEL ; egg hatch level
-
-.print
-	ld [wTextDecimalByte], a
-	hlcoord 13, 15
-	ld de, wTextDecimalByte
-	lb bc, PRINTNUM_LEFTALIGN | 1, 3
-	call PrintNum
-	ld de, MetAtLevelString
-	hlcoord 10, 14
-	call PlaceString
-	hlcoord 11, 15
-	ld [hl], "<LV>"
-	ret
-
-.unknown_level
-	ld de, MetUnknownLevelString
-	hlcoord 11, 14
-	call PlaceString
+	hlcoord 11, 8
+	ld bc, 6
+	predef PrintTempMonStats
 	ret
 
 .PlaceOTInfo:
 	ld de, IDNoString
-	hlcoord 10, 1
+	hlcoord 0, 9
 	call PlaceString
 	ld de, OTString
-	hlcoord 10, 4
+	hlcoord 0, 12
 	call PlaceString
-	hlcoord 12, 2
+	hlcoord 2, 10
 	lb bc, PRINTNUM_LEADINGZEROS | 2, 5
 	ld de, wTempMonID
 	call PrintNum
@@ -859,7 +792,7 @@ LoadBluePage:
 	call GetNicknamenamePointer
 	call CopyNickname
 	farcall CorrectNickErrors
-	hlcoord 12, 5
+	hlcoord 2, 13
 	call PlaceString
 	ld a, [wTempMonCaughtGender]
 	and a
@@ -871,7 +804,7 @@ LoadBluePage:
 	jr z, .got_gender
 	ld a, "♀"
 .got_gender
-	hlcoord 18, 6
+	hlcoord 9, 13
 	ld [hl], a
 .done
 	ret
@@ -881,17 +814,6 @@ LoadBluePage:
 	dw wOTPartyMonOTs
 	dw sBoxMonOTs
 	dw wBufferMonOT
-
-MetAtMapString:
-	db "MET AT:@"
-
-MetUnknownMapString:
-	db "UNKNOWN@"
-	
-MetAtLevelString:
-	db "MET LEVEL:@"    
-MetUnknownLevelString:
-	db "???@"
 
 IDNoString:
 	db "<ID>№.@"
@@ -931,14 +853,14 @@ StatsScreen_PlaceFrontpic:
 	ld a, [wCurPartySpecies]
 	cp UNOWN
 	jr z, .unown
-	hlcoord 1, 1
+	hlcoord 0, 0
 	call PrepMonFrontpic
 	ret
 
 .unown
 	xor a
 	ld [wBoxAlignment], a
-	hlcoord 1, 1
+	hlcoord 0, 0
 	call _PrepMonFrontpic
 	ret
 
@@ -964,7 +886,7 @@ StatsScreen_PlaceFrontpic:
 	call StatsScreen_LoadTextboxSpaceGFX
 	ld de, vTiles2 tile $00
 	predef GetAnimatedFrontpic
-	hlcoord 1, 1
+	hlcoord 0, 0
 	ld d, $0
 	ld e, ANIM_MON_MENU
 	predef LoadMonAnimation
@@ -1115,7 +1037,7 @@ endc
 	set 5, [hl]
 	call SetPalettes ; pals
 	call DelayFrame
-	hlcoord 2, 2
+	hlcoord 0, 0
 	call PrepMonFrontpic
 	farcall HDMATransferTilemapToWRAMBank3
 	call StatsScreen_AnimateEgg
@@ -1182,23 +1104,23 @@ StatsScreen_AnimateEgg:
 	ret
 
 StatsScreen_LoadPageIndicators:
-	hlcoord 1, 15
+	hlcoord 13, 5
 	ld a, $36 ; first of 4 small square tiles
 	call .load_square
-	hlcoord 3, 15
+	hlcoord 15, 5
 	ld a, $36 ; " " " "
 	call .load_square
-	hlcoord 5, 15
+	hlcoord 17, 5
 	ld a, $36 ; " " " "
 	call .load_square
 	ld a, c
 	cp GREEN_PAGE
 	ld a, $3a ; first of 4 large square tiles
-	hlcoord 1, 15 ; PINK_PAGE (< GREEN_PAGE)
+	hlcoord 13, 5 ; PINK_PAGE (< GREEN_PAGE)
 	jr c, .load_square
-	hlcoord 3, 15 ; GREEN_PAGE (= GREEN_PAGE)
+	hlcoord 15, 5 ; GREEN_PAGE (= GREEN_PAGE)
 	jr z, .load_square
-	hlcoord 5, 15 ; BLUE_PAGE (> GREEN_PAGE)
+	hlcoord 17, 5 ; BLUE_PAGE (> GREEN_PAGE)
 .load_square
 	push bc
 	ld [hli], a

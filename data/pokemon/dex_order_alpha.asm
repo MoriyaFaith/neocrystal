@@ -30,7 +30,6 @@ AlphabeticalPokedexOrder:
 	db CHINCHOU
 	db CLEFABLE
 	db CLEFAIRY
-	db CLEFFA
 	db CLOYSTER
 	db CORSOLA
 	db CROBAT
@@ -70,6 +69,7 @@ AlphabeticalPokedexOrder:
 	db GEODUDE
 	db GIRAFARIG
 	db GLIGAR
+	db GLISCOR
 	db GLOOM
 	db GOLBAT
 	db GOLDEEN
@@ -85,6 +85,7 @@ AlphabeticalPokedexOrder:
 	db HITMONCHAN
 	db HITMONLEE
 	db HITMONTOP
+	db HONCHKROW
 	db HO_OH
 	db HOOTHOOT
 	db HOPPIP
@@ -92,7 +93,6 @@ AlphabeticalPokedexOrder:
 	db HOUNDOOM
 	db HOUNDOUR
 	db HYPNO
-	db IGGLYBUFF
 	db IVYSAUR
 	db JIGGLYPUFF
 	db JOLTEON
@@ -117,7 +117,6 @@ AlphabeticalPokedexOrder:
 	db MACHAMP
 	db MACHOKE
 	db MACHOP
-	db MAGBY
 	db MAGCARGO
 	db MAGIKARP
 	db MAGMAR
@@ -135,6 +134,7 @@ AlphabeticalPokedexOrder:
 	db MEWTWO
 	db MILTANK
 	db MISDREAVUS
+	db MISMAGIUS
 	db MOLTRES
 	db MR__MIME
 	db MUK

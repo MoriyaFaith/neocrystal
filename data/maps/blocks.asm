@@ -88,12 +88,8 @@ LavenderTown_Blocks:
 PalletTown_Blocks:
 	INCBIN "maps/PalletTown.ablk"
 
-Route25_Blocks:
-	INCBIN "maps/Route25.ablk"
-
-Route24_Blocks:
-	INCBIN "maps/Route24.ablk"
-
+Route25_Blocks: ;unreferenced
+Route24_Blocks: ;unreferenced
 BetaVioletCity_Blocks: ; unreferenced
 	INCBIN "maps/unused/BetaVioletCity.ablk"
 

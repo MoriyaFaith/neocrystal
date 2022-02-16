@@ -171,8 +171,8 @@ FramesPointers:
 	dw ChinchouFrames
 	dw LanturnFrames
 	dw PichuFrames
-	dw CleffaFrames
-	dw IgglybuffFrames
+	dw HonchkrowFrames
+	dw MismagiusFrames
 	dw TogepiFrames
 	dw TogeticFrames
 	dw NatuFrames
@@ -238,7 +238,7 @@ FramesPointers:
 	dw HitmontopFrames
 	dw SmoochumFrames
 	dw WeavileFrames
-	dw MagbyFrames
+	dw GliscorFrames
 	dw MiltankFrames
 	dw BlisseyFrames
 	dw RaikouFrames

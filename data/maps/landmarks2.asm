@@ -50,7 +50,12 @@ LandmarkTitles:
 	landmark 132,  64, Route45Name2
 	landmark 112,  72, DarkCaveName2
 	landmark 124,  88, Route46Name2
+	landmark  28,  52, VictoryRoadName2
+	landmark  28,  52, VictoryRoadName2
+	landmark  28,  52, VictoryRoadName2
+	landmark  28,  52, VictoryRoadName2
 	landmark 148,  68, SilverCaveName2
+
 	assert_table_length KANTO_LANDMARK
 	landmark  52, 108, PalletTownName2
 	landmark  52,  92, Route1Name2
@@ -93,7 +98,6 @@ LandmarkTitles:
 	landmark  52, 132, CinnabarIslandName2
 	landmark  52, 120, Route21Name2
 	landmark  36,  68, Route22Name2
-	landmark  28,  52, VictoryRoadName2
 	landmark  28,  44, Route23Name2
 	landmark  28,  36, IndigoPlateauName2
 	landmark  28,  92, Route26Name2
@@ -208,3 +212,6 @@ UndergroundName2:     db "@"
 BattleTowerName2:     db "@"
 SpecialMapName2:      db "@"
 CliffCaveName2:       db "@"
+GoldenTowerName2:	  db "#MON LEAGUE@"
+Route49Name2:		  db "SUNSET RIVER@"
+Route50Name2:		  db "THE FINAL ROAD@"

@@ -1,10 +1,10 @@
-	db "STARSHAPE@" ; species name
-	dw 100, 70 ; height, weight
+	db "BIG BOSS@" ; species name
+	dw 211, 60 ; height, weight
 
-	db   "If the impact site"
-	next "of a meteorite is"
-	next "found, this"
+	db   "It is merciless by"
+	next "nature. It is said"
+	next "that it never"
 
-	page "#MON is certain"
-	next "to be within the"
-	next "immediate area.@"
+	page "forgives the"
+	next "mistakes of its"
+	next "MURKROW followers.@"

@@ -1,10 +1,10 @@
 	db "BALLOON@" ; species name
-	dw 100, 20 ; height, weight
+	dw 211, 97 ; height, weight
 
-	db   "Instead of walking"
-	next "with its short"
-	next "legs, it moves"
+	db   "Its cries sound"
+	next "like incantations"
+	next "to torment its foe."
 
-	page "around by bouncing"
-	next "on its soft,"
-	next "tender body.@"
+	page "It appears where"
+	next "you least expect"
+	next "it.@"

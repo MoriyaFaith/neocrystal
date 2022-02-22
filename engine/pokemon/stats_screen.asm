@@ -430,47 +430,12 @@ StatsScreen_InitUpperHalf:
 	hlcoord 1, 8
 	call PrintLevel
 
-	hlcoord 0, 11
+	hlcoord 0, 10
 	ld b, $0
 	predef DrawSummaryHP
-	hlcoord 6, 11
+	hlcoord 6, 10
 	ld [hl], $41 ; right HP/exp bar end cap
 
-	;ld de, .Status
-	;hlcoord 0, 9
-	;call PlaceString
-
-		ld a, [wTempMonPokerusStatus]
-	ld b, a
-	and $f
-	jr nz, .HasPokerus
-	ld a, b
-	and $f0
-	jr z, .NotImmuneToPkrs
-	hlcoord 0, 10
-	ld [hl], "." ; Pokérus immunity dot
-	
-.NotImmuneToPkrs:
-	ld a, [wMonType]
-	cp BOXMON
-	jr z, .StatusOK
-	hlcoord 4, 10
-	push hl
-	ld de, wTempMonStatus
-	predef PlaceStatusString
-	pop hl
-	jr nz, .done_status
-	jr .StatusOK
-.HasPokerus:
-	ld de, .PkrsStr
-	hlcoord 0, 10
-	call PlaceString
-	jr .done_status
-.StatusOK:
-	ld de, .OK_str
-	call PlaceString
-
-.done_status
 	hlcoord 5, 8
 	call .PlaceGenderChar
 	call StatsScreen_PlaceVerticalDivider
@@ -495,13 +460,6 @@ StatsScreen_InitUpperHalf:
 	call DelayFrame
 	ret
 
-
-.OK_str:
-	db "OK @"
-
-.PkrsStr:
-	db "#RUS@"
-
 .PlaceGenderChar:
 	push hl
 	farcall GetGender
@@ -513,9 +471,6 @@ StatsScreen_InitUpperHalf:
 .got_gender
 	ld [hl], a
 	ret
-
-.Status:
-	db   "STATUS/@"
 
 StatsScreen_PlaceVerticalDivider: ; unreferenced
 ; The Japanese stats screen has a vertical divider.
@@ -626,7 +581,7 @@ LoadPinkPage:
 	hlcoord 8, 1
 	call PlaceString
 
-	hlcoord 18, 1
+	hlcoord 9, 2
 	ld a, "/"
 	ld [hli], a
 
@@ -636,6 +591,41 @@ LoadPinkPage:
 	call GetPokemonName
 	call PlaceString
 
+	ld de, .Status
+	hlcoord 8, 8
+	call PlaceString
+
+		ld a, [wTempMonPokerusStatus]
+	ld b, a
+	and $f
+	jr nz, .HasPokerus
+	ld a, b
+	and $f0
+	jr z, .NotImmuneToPkrs
+	hlcoord 10, 9
+	ld [hl], "." ; Pokérus immunity dot
+	
+.NotImmuneToPkrs:
+	ld a, [wMonType]
+	cp BOXMON
+	jr z, .StatusOK
+	hlcoord 13, 9
+	push hl
+	ld de, wTempMonStatus
+	predef PlaceStatusString
+	pop hl
+	jr nz, .done_status
+	jr .StatusOK
+.HasPokerus:
+	ld de, .PkrsStr
+	hlcoord 13, 9
+	call PlaceString
+	jr .done_status
+.StatusOK:
+	ld de, .OK_str
+	call PlaceString
+
+.done_status
 	ld de, .Type
 	hlcoord 8, 4
 	call PlaceString
@@ -643,33 +633,33 @@ LoadPinkPage:
 	hlcoord 11, 5
 	predef PrintMonTypes
 	ld de, .ExpPointStr
-	hlcoord 8, 9
+	hlcoord 8, 11
 	call PlaceString
-	hlcoord 17, 12
+	hlcoord 17, 14
 	call .PrintNextLevel
-	hlcoord 13, 10
+	hlcoord 13, 12
 	lb bc, 3, 7
 	ld de, wTempMonExp
 	call PrintNum
 	call .CalcExpToNextLevel
-	hlcoord 6, 12
+	hlcoord 6, 14
 	lb bc, 3, 7
 	ld de, wExpToNextLevel
 	call PrintNum
 	ld de, .LevelUpStr
-	hlcoord 8, 11
+	hlcoord 8, 13
 	call PlaceString
 	ld de, .ToStr
-	hlcoord 14, 12
+	hlcoord 14, 14
 	call PlaceString
-	hlcoord 9, 14
+	hlcoord 10, 16
 	ld a, [wTempMonLevel]
 	ld b, a
 	ld de, wTempMonExp + 2
 	predef FillInExpBar
-	hlcoord 8, 14
+	hlcoord 9, 16
 	ld [hl], $40 ; left exp bar end cap
-	hlcoord 17, 14
+	hlcoord 18, 16
 	ld [hl], $41 ; right exp bar end cap
 	ret
 
@@ -734,6 +724,14 @@ LoadPinkPage:
 .ToStr:
 	db "TO@"
 
+.OK_str:
+	db "OK @"
+
+.PkrsStr:
+	db "#RUS@"
+
+.Status:
+	db   "STATUS/@"
 
 LoadGreenPage:
 	ld de, .Item
@@ -743,17 +741,17 @@ LoadGreenPage:
 	hlcoord 8, 2
 	call PlaceString
 	ld de, .Move
-	hlcoord 8, 5
+	hlcoord 8, 6
 	call PlaceString
 	ld hl, wTempMonMoves
 	ld de, wListMoves_MoveIndicesBuffer
 	ld bc, NUM_MOVES
 	call CopyBytes
-	hlcoord 8, 7
+	hlcoord 8, 8
 	ld a, SCREEN_WIDTH * 2
 	ld [wListMovesLineSpacing], a
 	predef ListMoves
-	hlcoord 12, 8
+	hlcoord 12, 9
 	ld a, SCREEN_WIDTH * 2
 	ld [wListMovesLineSpacing], a
 	predef ListMovePP
@@ -778,7 +776,7 @@ LoadGreenPage:
 	db "---@"
 
 .Move:
-	db "MOVE/@"
+	db "MOVES/@"
 
 LoadBluePage:
 	call .PlaceOTInfo

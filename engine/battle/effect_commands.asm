@@ -2634,7 +2634,7 @@ PlayerAttackDamage:
 	ld hl, wPlayerSpAtk
 	
 .elepunch
-	ld hl, wEnemyMonSpclDef
+	ld hl, wEnemyMonDefense
 	ld a, [hli]
 	ld b, a
 	ld c, [hl]
@@ -2650,7 +2650,7 @@ PlayerAttackDamage:
 	call CheckDamageStatsCritical
 	jr c, .thickclub
 
-	ld hl, wEnemySpDef
+	ld hl, wEnemyDefense
 	ld a, [hli]
 	ld b, a
 	ld c, [hl]
@@ -2903,7 +2903,7 @@ EnemyAttackDamage:
 	ld hl, wEnemySpAtk
 
 .elepunch
-	ld hl, wBattleMonSpclDef
+	ld hl, wBattleMonDefense
 	ld a, [hli]
 	ld b, a
 	ld c, [hl]
@@ -2918,7 +2918,7 @@ EnemyAttackDamage:
 	ld hl, wEnemyMonAttack
 	call CheckDamageStatsCritical
 	jr c, .lightball
-	ld hl, wPlayerSpDef
+	ld hl, wPlayerDefense
 	ld a, [hli]
 	ld b, a
 	ld c, [hl]

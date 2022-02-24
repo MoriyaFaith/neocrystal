@@ -1,7 +1,12 @@
 	db TOTODILE ; 158
 
+if DEF(FAITHFUL)
 	db  50,  65,  64,  43,  44,  48
 	;   hp  atk  def  spd  sat  sdf
+else
+	db  50,  70,  64,  44,  38,  48
+	;   hp  atk  def  spd  sat  sdf
+endc
 
 	db WATER, WATER ; type
 	db 45 ; catch rate

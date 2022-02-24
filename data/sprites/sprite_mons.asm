@@ -45,6 +45,6 @@ SpriteMons:
 	db MILTANK
 	db AMPHAROS
 	db PERSIAN
-	db PIDGEY
-	db RATTATA
+	db SPEAROW
+	db SENTRET
 	assert_table_length NUM_POKEMON_SPRITES

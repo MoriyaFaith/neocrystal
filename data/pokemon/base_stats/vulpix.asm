@@ -1,11 +1,12 @@
 	db VULPIX ; 037
 
+if DEF(FAITHFUL)
 	db  38,  41,  40,  65,  50,  65
 	;   hp  atk  def  spd  sat  sdf
-
-if DEF(FAITHFUL)
 	db FIRE, FIRE ; type
 else
+	db  53,  41,  40,  65,  80,  65
+	;   hp  atk  def  spd  sat  sdf
 	db FIRE, GHOST ; type
 endc
 	db 190 ; catch rate

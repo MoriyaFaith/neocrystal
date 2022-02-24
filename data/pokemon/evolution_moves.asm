@@ -165,9 +165,9 @@ EvolutionMoves::
 	db NO_MOVE      ; HOOTHOOT   ; a3
 	db CONFUSION    ; NOCTOWL    ; a4
 	db NO_MOVE      ; LEDYBA     ; a5
-	db NO_MOVE      ; LEDIAN     ; a6
+	db MACH_PUNCH   ; LEDIAN     ; a6
 	db NO_MOVE      ; SPINARAK   ; a7
-	db NO_MOVE      ; ARIADOS    ; a8
+	db SPIDER_WEB   ; ARIADOS    ; a8
 	db NO_MOVE      ; CROBAT     ; a9
 	db NO_MOVE      ; CHINCHOU   ; aa
 	db NO_MOVE      ; LANTURN    ; ab

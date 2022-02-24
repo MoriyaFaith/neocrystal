@@ -413,6 +413,9 @@ Route31SignText:
 
 DarkCaveSignText:
 	text "DARK CAVE"
+
+	para "Beware of"
+	line "URSARING cubs!"
 	done
 
 Route31_MapEvents:

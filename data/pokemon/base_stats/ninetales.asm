@@ -3,14 +3,10 @@
 if DEF(FAITHFUL)
 	db  73,  76,  75, 100,  81, 100
 	;   hp  atk  def  spd  sat  sdf
+	db FIRE, FIRE ; type
 else
 	db  89,  76,  75, 100, 116,  80
 	;   hp  atk  def  spd  sat  sdf
-endc
-
-if DEF(FAITHFUL)
-	db FIRE, FIRE ; type
-else
 	db FIRE, GHOST ; type
 endc
 	db 75 ; catch rate

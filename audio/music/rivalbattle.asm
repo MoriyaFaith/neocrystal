@@ -1,8 +1,9 @@
 Music_RivalBattle:
-	channel_count 3
+	channel_count 4
 	channel 1, Music_RivalBattle_Ch1
 	channel 2, Music_RivalBattle_Ch2
 	channel 3, Music_RivalBattle_Ch3
+	channel 4, Music_RivalBattle_Ch4
 
 Music_RivalBattle_Ch1:
 	tempo 102
@@ -862,3 +863,771 @@ Music_RivalBattle_Ch3:
 	note D#, 2
 	sound_loop 2, .sub4loop1
 	sound_ret
+
+; ============================================================================================================
+
+Music_RivalBattle_Ch4:
+	toggle_noise 3
+	drum_speed 12
+;Bar 1
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 10, 16
+;Bar 2
+	drum_note 1, 4
+	drum_note 1, 4
+	drum_note 1, 2
+	drum_note 3, 2
+	drum_note 1, 2
+	drum_note 3, 2
+;Bar 3
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 2, 4
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 4
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 2
+	drum_note 1, 2
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 4
+;Bar 4
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 4
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 2
+	drum_note 1, 2
+	drum_note 7, 2
+	drum_note 1, 2
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 4
+;Bar 5
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 4
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 4
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 2
+	drum_note 1, 2
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 4
+;Bar 6
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 4
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 2
+	drum_note 1, 2
+	drum_note 7, 2
+	drum_note 1, 2
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 4
+;Bar 7
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 4
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 4
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 2
+	drum_note 1, 2
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 4
+;Bar 8
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 4
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 2
+	drum_note 1, 2
+	drum_note 7, 2
+	drum_note 1, 2
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 4
+;Bar 9
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 4
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 4
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 2
+	drum_note 1, 2
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 4
+;Bar 10
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 4
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 2
+	drum_note 1, 2
+	drum_note 7, 2
+	drum_note 1, 2
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 4
+;Bar 11
+.loop:
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 2
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	drum_note 7, 2
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 2
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	drum_note 7, 2
+;Bar 12
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 1
+	drum_note 7, 1
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 1
+	drum_note 7, 1
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 1
+	drum_note 7, 1
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 1
+	drum_note 7, 1
+;Bar 13
+	;note C_, 0 | WARNING: Rounded down to 0
+	;note A#, 0 | WARNING: Rounded down to 0
+	drum_note 5, 4
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 4
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 2
+	drum_note 1, 2
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 4
+;Bar 14
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 4
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 2
+	drum_note 1, 2
+	drum_note 7, 2
+	drum_note 1, 2
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 4
+;Bar 15
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 2
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	drum_note 7, 2
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 2
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	drum_note 7, 2
+;Bar 16
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 1
+	drum_note 7, 1
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	drum_note 7, 1
+	drum_note 7, 1
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 1
+	drum_note 7, 1
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	drum_note 7, 1
+	drum_note 7, 1
+;Bar 17
+	;note C_, 0 | WARNING: Rounded down to 0
+	;note A#, 0 | WARNING: Rounded down to 0
+	drum_note 5, 4
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 4
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 2
+	drum_note 1, 2
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 4
+;Bar 18
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 4
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 2
+	drum_note 1, 2
+	drum_note 7, 2
+	drum_note 1, 2
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 4
+;Bar 19
+	;note C_, 0 | WARNING: Rounded down to 0
+	;note C#, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	drum_note 7, 1
+	drum_note 7, 1
+	drum_note 3, 2
+	drum_note 7, 1
+	drum_note 7, 1
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 1
+	drum_note 7, 1
+	drum_note 3, 2
+	drum_note 7, 1
+	drum_note 7, 1
+;Bar 20
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	drum_note 7, 1
+	drum_note 7, 1
+	drum_note 3, 2
+	drum_note 7, 1
+	drum_note 7, 1
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 1
+	drum_note 7, 1
+	drum_note 3, 2
+	drum_note 7, 1
+	drum_note 7, 1
+;Bar 21
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	drum_note 7, 1
+	drum_note 7, 1
+	drum_note 3, 2
+	drum_note 7, 1
+	drum_note 7, 1
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 1
+	drum_note 7, 1
+	drum_note 3, 2
+	drum_note 7, 1
+	drum_note 7, 1
+;Bar 22
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	drum_note 7, 1
+	drum_note 7, 1
+	drum_note 3, 2
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 1
+	drum_note 7, 1
+	drum_note 11, 2
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 1
+	drum_note 7, 1
+	drum_note 3, 2
+	drum_note 7, 1
+	drum_note 7, 1
+;Bar 23
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	drum_note 7, 1
+	drum_note 7, 1
+	drum_note 3, 2
+	drum_note 7, 1
+	drum_note 7, 1
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 1
+	drum_note 7, 1
+	drum_note 3, 2
+	drum_note 7, 1
+	drum_note 7, 1
+;Bar 24
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	drum_note 7, 1
+	drum_note 7, 1
+	drum_note 3, 2
+	drum_note 7, 1
+	drum_note 7, 1
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 1
+	drum_note 7, 1
+	drum_note 3, 2
+	drum_note 7, 1
+	drum_note 7, 1
+;Bar 25
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	drum_note 7, 1
+	drum_note 7, 1
+	drum_note 3, 2
+	drum_note 7, 1
+	drum_note 7, 1
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 1
+	drum_note 7, 1
+	drum_note 3, 2
+	drum_note 7, 1
+	drum_note 7, 1
+;Bar 26
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	drum_note 7, 1
+	drum_note 7, 1
+	drum_note 3, 2
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 1
+	drum_note 7, 1
+	drum_note 11, 2
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 1
+	drum_note 7, 1
+	drum_note 3, 2
+	drum_note 7, 1
+	drum_note 7, 1
+;Bar 27
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	drum_note 7, 1
+	drum_note 7, 1
+	drum_note 3, 2
+	drum_note 7, 1
+	drum_note 7, 1
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 1
+	drum_note 7, 1
+	drum_note 3, 2
+	drum_note 7, 1
+	drum_note 7, 1
+;Bar 28
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	drum_note 7, 1
+	drum_note 7, 1
+	drum_note 3, 2
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 1
+	drum_note 7, 1
+	drum_note 11, 2
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 1
+	drum_note 7, 1
+	drum_note 3, 2
+	drum_note 7, 1
+	drum_note 7, 1
+;Bar 29
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	drum_note 7, 1
+	drum_note 7, 1
+	drum_note 3, 2
+	drum_note 7, 1
+	drum_note 7, 1
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 1
+	drum_note 7, 1
+	drum_note 3, 2
+	drum_note 7, 1
+	drum_note 7, 1
+;Bar 30
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	drum_note 7, 1
+	drum_note 7, 1
+	drum_note 3, 2
+	drum_note 7, 1
+	drum_note 7, 1
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 1
+	drum_note 7, 1
+	drum_note 3, 2
+	drum_note 7, 1
+	drum_note 7, 1
+;Bar 31
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	drum_note 7, 1
+	drum_note 7, 1
+	drum_note 3, 2
+	drum_note 7, 1
+	drum_note 7, 1
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 1
+	drum_note 7, 1
+	drum_note 3, 2
+	drum_note 7, 1
+	drum_note 7, 1
+;Bar 32
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	drum_note 7, 1
+	drum_note 7, 1
+	drum_note 3, 2
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 1
+	drum_note 7, 1
+	drum_note 11, 2
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 1
+	drum_note 7, 1
+	drum_note 3, 2
+	drum_note 7, 1
+	drum_note 7, 1
+;Bar 33
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	drum_note 7, 1
+	drum_note 7, 1
+	drum_note 3, 2
+	drum_note 7, 1
+	drum_note 7, 1
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 1
+	drum_note 7, 1
+	drum_note 3, 2
+	drum_note 7, 1
+	drum_note 7, 1
+;Bar 34
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	drum_note 7, 1
+	drum_note 7, 1
+	drum_note 3, 2
+	drum_note 7, 1
+	drum_note 7, 1
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 1
+	drum_note 7, 1
+	drum_note 3, 2
+	drum_note 7, 1
+	drum_note 7, 1
+;Bar 35
+	;note C_, 0 | WARNING: Rounded down to 0
+	;note A#, 0 | WARNING: Rounded down to 0
+	drum_note 2, 4
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 2
+	drum_note 7, 2
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	drum_note 1, 2
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 2
+	drum_note 7, 2
+;Bar 36
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 4
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 2
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 2
+	drum_note 11, 2
+	drum_note 1, 2
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 2
+	drum_note 7, 2
+;Bar 37
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 4
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 2
+	drum_note 7, 2
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	drum_note 1, 2
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 2
+	drum_note 7, 2
+;Bar 38
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 4
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 2
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 2
+	drum_note 11, 2
+	drum_note 1, 2
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 2
+	drum_note 7, 2
+;Bar 39
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 4
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 2
+	drum_note 7, 2
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	drum_note 1, 2
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 2
+	drum_note 7, 2
+;Bar 40
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 4
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 2
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 2
+	drum_note 11, 2
+	drum_note 1, 2
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 2
+	drum_note 7, 2
+;Bar 41
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 4
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 2
+	drum_note 7, 2
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	drum_note 1, 2
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 2
+	drum_note 7, 2
+;Bar 42
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 4
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 2
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 2
+	drum_note 11, 2
+	drum_note 1, 2
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 2
+	drum_note 7, 2
+;Bar 43
+	;note D_, 0 | WARNING: Rounded down to 0
+	;note A#, 0 | WARNING: Rounded down to 0
+	drum_note 2, 2
+	;note F#, 0 | WARNING: Rounded down to 0
+	drum_note 1, 1
+	;note F#, 0 | WARNING: Rounded down to 0
+	drum_note 1, 1
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	;note F#, 0 | WARNING: Rounded down to 0
+	drum_note 1, 1
+	;note F#, 0 | WARNING: Rounded down to 0
+	drum_note 1, 1
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	;note F#, 0 | WARNING: Rounded down to 0
+	drum_note 1, 1
+	;note F#, 0 | WARNING: Rounded down to 0
+	drum_note 1, 1
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	;note F#, 0 | WARNING: Rounded down to 0
+	drum_note 1, 1
+	;note F#, 0 | WARNING: Rounded down to 0
+	drum_note 1, 1
+;Bar 44
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	;note F#, 0 | WARNING: Rounded down to 0
+	drum_note 1, 1
+	;note F#, 0 | WARNING: Rounded down to 0
+	drum_note 1, 1
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	;note F#, 0 | WARNING: Rounded down to 0
+	drum_note 1, 1
+	;note F#, 0 | WARNING: Rounded down to 0
+	drum_note 1, 1
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	;note F#, 0 | WARNING: Rounded down to 0
+	drum_note 1, 1
+	;note F#, 0 | WARNING: Rounded down to 0
+	drum_note 1, 1
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	;note F#, 0 | WARNING: Rounded down to 0
+	drum_note 1, 1
+	;note F#, 0 | WARNING: Rounded down to 0
+	drum_note 1, 1
+;Bar 45
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	;note F#, 0 | WARNING: Rounded down to 0
+	drum_note 1, 1
+	;note F#, 0 | WARNING: Rounded down to 0
+	drum_note 1, 1
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	;note F#, 0 | WARNING: Rounded down to 0
+	drum_note 1, 1
+	;note F#, 0 | WARNING: Rounded down to 0
+	drum_note 1, 1
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 1
+	drum_note 1, 1
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	;note F#, 0 | WARNING: Rounded down to 0
+	drum_note 1, 1
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 1
+;Bar 46
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	drum_note 7, 1
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 1
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 1
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 1
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	drum_note 7, 1
+	drum_note 7, 1
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	drum_note 7, 1
+	drum_note 7, 1
+;Bar 47
+	;note D_, 0 | WARNING: Rounded down to 0
+	;note A#, 0 | WARNING: Rounded down to 0
+	drum_note 10, 2
+	;note F#, 0 | WARNING: Rounded down to 0
+	drum_note 1, 1
+	;note F#, 0 | WARNING: Rounded down to 0
+	drum_note 1, 1
+	drum_note 3, 2
+	;note F#, 0 | WARNING: Rounded down to 0
+	drum_note 1, 1
+	;note F#, 0 | WARNING: Rounded down to 0
+	drum_note 1, 1
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	;note F#, 0 | WARNING: Rounded down to 0
+	drum_note 1, 1
+	;note F#, 0 | WARNING: Rounded down to 0
+	drum_note 1, 1
+	drum_note 3, 2
+	;note F#, 0 | WARNING: Rounded down to 0
+	drum_note 1, 1
+	;note F#, 0 | WARNING: Rounded down to 0
+	drum_note 1, 1
+;Bar 48
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	;note F#, 0 | WARNING: Rounded down to 0
+	drum_note 1, 1
+	;note F#, 0 | WARNING: Rounded down to 0
+	drum_note 1, 1
+	drum_note 3, 2
+	;note F#, 0 | WARNING: Rounded down to 0
+	drum_note 1, 1
+	;note F#, 0 | WARNING: Rounded down to 0
+	drum_note 1, 1
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	;note F#, 0 | WARNING: Rounded down to 0
+	drum_note 1, 1
+	;note F#, 0 | WARNING: Rounded down to 0
+	drum_note 1, 1
+	drum_note 3, 1
+	drum_note 3, 1
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 2
+;Bar 49
+	;note D_, 0 | WARNING: Rounded down to 0
+	;note A#, 0 | WARNING: Rounded down to 0
+	drum_note 8, 2
+	;note F#, 0 | WARNING: Rounded down to 0
+	drum_note 1, 1
+	drum_note 7, 1
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	drum_note 7, 1
+	drum_note 7, 1
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 1
+	drum_note 7, 1
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	drum_note 7, 1
+	drum_note 7, 1
+;Bar 50
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	drum_note 7, 1
+	drum_note 7, 1
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 2
+	;note C_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 1
+	drum_note 7, 1
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 1
+	drum_note 3, 1
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 1
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 1
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 11, 1
+	drum_note 3, 1
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 1
+	;note D_, 0 | WARNING: Rounded down to 0
+	drum_note 7, 1
+;Bar 51
+	;note C_, 0 | WARNING: Rounded down to 0
+	;note A#, 0 | WARNING: Rounded down to 0
+	drum_note 10, 4
+	drum_note 1, 4
+	drum_note 1, 4
+	drum_note 1, 4
+;Bar 52
+	drum_note 1, 2
+	drum_note 1, 2
+	drum_note 3, 2
+	drum_note 1, 2
+	drum_note 1, 2
+	drum_note 3, 2
+	drum_note 1, 2
+	drum_note 3, 2
+	sound_loop 0, .loop
+	sound_ret
+
+; ============================================================================================================

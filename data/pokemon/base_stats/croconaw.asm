@@ -1,7 +1,12 @@
 	db CROCONAW ; 159
 
+if DEF(FAITHFUL)
 	db  65,  80,  80,  58,  59,  63
 	;   hp  atk  def  spd  sat  sdf
+else
+	db  65,  85,  80,  59,  53,  63
+	;   hp  atk  def  spd  sat  sdf
+endc
 
 	db WATER, WATER ; type
 	db 45 ; catch rate

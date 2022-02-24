@@ -14,7 +14,6 @@ INCLUDE "audio/sfx_pointers.asm"
 SECTION "Songs 1", ROMX
 
 INCLUDE "audio/music/route36.asm"
-INCLUDE "audio/music/rivalbattle.asm"
 INCLUDE "audio/music/rocketbattle.asm"
 INCLUDE "audio/music/elmslab.asm"
 INCLUDE "audio/music/darkcave.asm"
@@ -143,6 +142,8 @@ INCLUDE "audio/music/postcredits.asm"
 SECTION "New Songs", ROMX
 
 INCLUDE "audio/music/route47.asm"
+INCLUDE "audio/music/rivalbattle.asm"
+INCLUDE "audio/music/new/kantolegend.asm" ; DarkViolet Legendary Theme
 
 SECTION "Sound Effects", ROMX
 

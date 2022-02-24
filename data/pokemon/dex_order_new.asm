@@ -1,6 +1,7 @@
-; Every Pokémon sorted in New Pokédex Order.
+; Johto Pokedex. Any Pokemon Commented out was removed from Johto's grass
 
 NewPokedexOrder:
+; Starters
 	db CHIKORITA
 	db BAYLEEF
 	db MEGANIUM
@@ -10,74 +11,73 @@ NewPokedexOrder:
 	db TOTODILE
 	db CROCONAW
 	db FERALIGATR
-	db PIDGEY
-	db PIDGEOTTO
-	db PIDGEOT
+
+; Route 29 - Sprout Tower
+	;db PIDGEY
+	;db PIDGEOTTO
+	;db PIDGEOT
 	db SPEAROW
 	db FEAROW
 	db HOOTHOOT
 	db NOCTOWL
-	db RATTATA
-	db RATICATE
+	;db RATTATA
+	;db RATICATE
 	db SENTRET
 	db FURRET
-	db PICHU
-	db PIKACHU
-	db RAICHU
-	db CATERPIE
-	db METAPOD
-	db BUTTERFREE
-	db WEEDLE
-	db KAKUNA
-	db BEEDRILL
+	;db PICHU
+	;db PIKACHU
+	;db RAICHU
+	;db CATERPIE
+	;db METAPOD
+	;db BUTTERFREE
+	;db WEEDLE
+	;db KAKUNA
+	;db BEEDRILL
 	db LEDYBA
 	db LEDIAN
 	db SPINARAK
 	db ARIADOS
-	db GEODUDE
-	db GRAVELER
-	db GOLEM
+	db MACHOP
+	db MACHOKE
+	db MACHAMP
 	db ZUBAT
 	db GOLBAT
 	db CROBAT
-	db CLEFAIRY
-	db CLEFABLE
-	db JIGGLYPUFF
-	db WIGGLYTUFF
-	db TOGEPI
-	db TOGETIC
-	db SANDSHREW
-	db SANDSLASH
-	db EKANS
-	db ARBOK
 	db DUNSPARCE
-	db MAREEP
-	db FLAAFFY
-	db AMPHAROS
 	db WOOPER
 	db QUAGSIRE
 	db GASTLY
 	db HAUNTER
 	db GENGAR
-	db UNOWN
-	db ONIX
-	db STEELIX
 	db BELLSPROUT
 	db WEEPINBELL
 	db VICTREEBEL
+	db TOGEPI
+	db TOGETIC
+
+;Route 32 - Azalea Town
+	;db SANDSHREW
+	;db SANDSLASH
+	;db EKANS
+	;db ARBOK
+	db MAREEP
+	db FLAAFFY
+	db AMPHAROS
 	db HOPPIP
 	db SKIPLOOM
 	db JUMPLUFF
+	db GEODUDE
+	db GRAVELER
+	db GOLEM
+	db ONIX
+	db STEELIX
+	db UNOWN
 	db PARAS
 	db PARASECT
-	db POLIWAG
-	db POLIWHIRL
-	db POLIWRATH
-	db POLITOED
 	db MAGIKARP
 	db GYARADOS
-	db GOLDEEN
-	db SEAKING
+	;db GOLDEEN
+	;db SEAKING
 	db SLOWPOKE
 	db SLOWBRO
 	db SLOWKING
@@ -95,12 +95,6 @@ NewPokedexOrder:
 	db DITTO
 	db PINECO
 	db FORRETRESS
-	db NIDORAN_F
-	db NIDORINA
-	db NIDOQUEEN
-	db NIDORAN_M
-	db NIDORINO
-	db NIDOKING
 	db YANMA
 	db SUNKERN
 	db SUNFLORA
@@ -118,6 +112,22 @@ NewPokedexOrder:
 	db WEEZING
 	db GRIMER
 	db MUK
+	db CLEFAIRY ; Lunar Lake
+	db CLEFABLE ; Lunar Lake
+	db JIGGLYPUFF ; Lunar Lake
+	db WIGGLYTUFF ; Lunar Lake
+	db NIDORAN_F ; Lunar Lake
+	db NIDORINA ; Lunar Lake
+	db NIDOQUEEN ; Lunar Lake
+	db NIDORAN_M ; Lunar Lake
+	db NIDORINO ; Lunar Lake
+	db NIDOKING ; Lunar Lake
+	db POLIWAG
+	db POLIWHIRL
+	db POLIWRATH
+	db POLITOED
+	db DODUO
+	db DODRIO
 	db MAGNEMITE
 	db MAGNETON
 	db VOLTORB
@@ -134,17 +144,14 @@ NewPokedexOrder:
 	db STANTLER
 	db MARILL
 	db AZUMARILL
-	db DIGLETT
-	db DUGTRIO
-	db MANKEY
-	db PRIMEAPE
-	db MEOWTH
-	db PERSIAN
-	db PSYDUCK
-	db GOLDUCK
-	db MACHOP
-	db MACHOKE
-	db MACHAMP
+	;db DIGLETT
+	;db DUGTRIO
+	;db MANKEY
+	;db PRIMEAPE
+	;db MEOWTH
+	;db PERSIAN
+	;db PSYDUCK
+	;db GOLDUCK
 	db SLUGMA
 	db MAGCARGO
 	db TYROGUE
@@ -158,15 +165,13 @@ NewPokedexOrder:
 	db MILTANK
 	db SMOOCHUM
 	db JYNX
-	db SMEARGLE
-	db FARFETCH_D
 	db NATU
 	db XATU
 	db QWILFISH
-	db TENTACOOL
-	db TENTACRUEL
-	db KRABBY
-	db KINGLER
+	;db TENTACOOL
+	;db TENTACRUEL
+	;db KRABBY
+	;db KINGLER
 	db SHUCKLE
 	db STARYU
 	db STARMIE
@@ -190,6 +195,8 @@ NewPokedexOrder:
 	db HORSEA
 	db SEADRA
 	db KINGDRA
+	db PONYTA
+	db RAPIDASH
 	db GLIGAR
 	db GLISCOR
 	db DELIBIRD
@@ -204,6 +211,15 @@ NewPokedexOrder:
 	db MANTINE
 	db SKARMORY
 	db LAPRAS
+	db RHYHORN
+	db RHYDON
+	db KANGASKHAN
+	db PORYGON
+	db PORYGON2
+	db CHANSEY
+	db BLISSEY
+
+;Pseudos and Legendaries
 	db RAIKOU
 	db ENTEI
 	db SUICUNE

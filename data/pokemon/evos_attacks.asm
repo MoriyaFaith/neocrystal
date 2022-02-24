@@ -544,7 +544,7 @@ ZubatEvosAttacks:
 	db 0 ; no more level-up moves
 
 GolbatEvosAttacks:
-	db EVOLVE_HAPPINESS, TR_ANYTIME, CROBAT
+	db EVOLVE_HAPPINESS, TR_NITE, CROBAT
 	db 0 ; no more evolutions
 	db 1, SCREECH
 	db 1, LEECH_LIFE
@@ -621,7 +621,7 @@ ParasectEvosAttacks:
 	db 0 ; no more level-up moves
 
 VenonatEvosAttacks:
-	db EVOLVE_LEVEL, 31, VENOMOTH
+	db EVOLVE_LEVEL, 26, VENOMOTH
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 1, DISABLE
@@ -863,7 +863,7 @@ AlakazamEvosAttacks:
 	db 0 ; no more level-up moves
 
 MachopEvosAttacks:
-	db EVOLVE_LEVEL, 28, MACHOKE
+	db EVOLVE_LEVEL, 25, MACHOKE
 	db 0 ; no more evolutions
 	db 1, LOW_KICK
 	db 1, LEER
@@ -1024,7 +1024,7 @@ GolemEvosAttacks:
 	db 0 ; no more level-up moves
 
 PonytaEvosAttacks:
-	db EVOLVE_LEVEL, 40, RAPIDASH
+	db EVOLVE_LEVEL, 28, RAPIDASH
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 4, GROWL
@@ -1055,7 +1055,7 @@ RapidashEvosAttacks:
 	db 0 ; no more level-up moves
 
 SlowpokeEvosAttacks:
-	db EVOLVE_LEVEL, 37, SLOWBRO
+	db EVOLVE_LEVEL, 32, SLOWBRO
 	db EVOLVE_LEVELITEM, KINGS_ROCK, SLOWKING
 	db 0 ; no more evolutions
 	db 1, CURSE
@@ -1537,7 +1537,7 @@ RhydonEvosAttacks:
 	db 0 ; no more level-up moves
 
 ChanseyEvosAttacks:
-	db EVOLVE_HAPPINESS, TR_ANYTIME, BLISSEY
+	db EVOLVE_HAPPINESS, TR_MORNDAY, BLISSEY
 	db 0 ; no more evolutions
 	db 1, POUND
 	db 5, GROWL
@@ -1580,7 +1580,7 @@ KangaskhanEvosAttacks:
 	db 0 ; no more level-up moves
 
 HorseaEvosAttacks:
-	db EVOLVE_LEVEL, 32, SEADRA
+	db EVOLVE_LEVEL, 27, SEADRA
 	db 0 ; no more evolutions
 	db 1, BUBBLE
 	db 8, SMOKESCREEN
@@ -1607,7 +1607,7 @@ SeadraEvosAttacks:
 	db 0 ; no more level-up moves
 
 GoldeenEvosAttacks:
-	db EVOLVE_LEVEL, 33, SEAKING
+	db EVOLVE_LEVEL, 28, SEAKING
 	db 0 ; no more evolutions
 	db 1, PECK
 	db 1, TAIL_WHIP
@@ -2267,10 +2267,11 @@ NoctowlEvosAttacks:
 	db 0 ; no more level-up moves
 
 LedybaEvosAttacks:
-	db EVOLVE_LEVEL, 18, LEDIAN
+	db EVOLVE_LEVEL, 12, LEDIAN
 	db 0 ; no more evolutions
 	db 1, TACKLE
 	db 8, SUPERSONIC
+	db 11, MACH_PUNCH
 	db 15, COMET_PUNCH
 	db 22, LIGHT_SCREEN
 	db 22, REFLECT
@@ -2291,13 +2292,13 @@ LedianEvosAttacks:
 	db 24, REFLECT
 	db 24, SAFEGUARD
 	db 33, BATON_PASS
-	db 42, SWIFT
+	db 42, MEGA_PUNCH
 	db 51, AGILITY
-	db 60, DOUBLE_EDGE
+	db 60, SUBMISSION
 	db 0 ; no more level-up moves
 
 SpinarakEvosAttacks:
-	db EVOLVE_LEVEL, 22, ARIADOS
+	db EVOLVE_LEVEL, 12, ARIADOS
 	db 0 ; no more evolutions
 	db 1, POISON_STING
 	db 1, STRING_SHOT
@@ -2319,10 +2320,10 @@ AriadosEvosAttacks:
 	db 1, CONSTRICT
 	db 6, SCARY_FACE
 	db 11, CONSTRICT
+	db 11, SPIDER_WEB
 	db 17, NIGHT_SHADE
 	db 25, LEECH_LIFE
 	db 34, FURY_SWIPES
-	db 43, SPIDER_WEB
 	db 53, AGILITY
 	db 63, PSYCHIC_M
 	db 0 ; no more level-up moves

@@ -166,8 +166,8 @@ SPRITE_POKEMON EQU const_value
 	const SPRITE_MILTANK ; a9
 	const SPRITE_AMPHAROS ; aa
 	const SPRITE_PERSIAN ; ab
-	const SPRITE_PIDGEY ; ac
-	const SPRITE_RATTATA ; ad
+	const SPRITE_SPEAROW ; ac
+	const SPRITE_SENTRET ; ad
 NUM_POKEMON_SPRITES EQU const_value - SPRITE_POKEMON
 
 ; special GetMonSprite values (see engine/overworld/overworld.asm)
